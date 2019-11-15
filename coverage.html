@@ -1,0 +1,4393 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">github.com/emisgroup/auditor/pkg/audit-bot/aws/bucket.go (100.0%)</option>
+				
+				<option value="file1">github.com/emisgroup/auditor/pkg/audit-bot/aws/lambda.go (100.0%)</option>
+				
+				<option value="file2">github.com/emisgroup/auditor/pkg/audit-bot/aws/secrets.go (100.0%)</option>
+				
+				<option value="file3">github.com/emisgroup/auditor/pkg/audit-bot/handler/check_run.go (100.0%)</option>
+				
+				<option value="file4">github.com/emisgroup/auditor/pkg/audit-bot/handler/check_suite.go (100.0%)</option>
+				
+				<option value="file5">github.com/emisgroup/auditor/pkg/audit-bot/handler/pull_request.go (100.0%)</option>
+				
+				<option value="file6">github.com/emisgroup/auditor/pkg/audit-bot/handler/router.go (93.3%)</option>
+				
+				<option value="file7">github.com/emisgroup/auditor/pkg/audit-bot/server/handler/generic.go (100.0%)</option>
+				
+				<option value="file8">github.com/emisgroup/auditor/pkg/auditor-cli/completion.go (75.0%)</option>
+				
+				<option value="file9">github.com/emisgroup/auditor/pkg/auditor-cli/github/document.go (82.4%)</option>
+				
+				<option value="file10">github.com/emisgroup/auditor/pkg/auditor-cli/github/github.go (100.0%)</option>
+				
+				<option value="file11">github.com/emisgroup/auditor/pkg/auditor-cli/github/repo/cache.go (81.8%)</option>
+				
+				<option value="file12">github.com/emisgroup/auditor/pkg/auditor-cli/github/repo/cmd.go (100.0%)</option>
+				
+				<option value="file13">github.com/emisgroup/auditor/pkg/auditor-cli/github/repo/inspect.go (84.0%)</option>
+				
+				<option value="file14">github.com/emisgroup/auditor/pkg/auditor-cli/github/repo/list.go (95.6%)</option>
+				
+				<option value="file15">github.com/emisgroup/auditor/pkg/auditor-cli/github/repo/progress.go (85.6%)</option>
+				
+				<option value="file16">github.com/emisgroup/auditor/pkg/auditor-cli/github/repo/repo.go (100.0%)</option>
+				
+				<option value="file17">github.com/emisgroup/auditor/pkg/auditor-cli/github/repo/vet.go (88.5%)</option>
+				
+				<option value="file18">github.com/emisgroup/auditor/pkg/auditor-cli/github/team/inspect.go (82.8%)</option>
+				
+				<option value="file19">github.com/emisgroup/auditor/pkg/auditor-cli/github/team/list.go (93.5%)</option>
+				
+				<option value="file20">github.com/emisgroup/auditor/pkg/auditor-cli/github/team/team.go (100.0%)</option>
+				
+				<option value="file21">github.com/emisgroup/auditor/pkg/auditor-cli/github/user/list.go (79.5%)</option>
+				
+				<option value="file22">github.com/emisgroup/auditor/pkg/auditor-cli/github/user/user.go (100.0%)</option>
+				
+				<option value="file23">github.com/emisgroup/auditor/pkg/auditor-cli/root.go (44.4%)</option>
+				
+				<option value="file24">github.com/emisgroup/auditor/pkg/auditor-cli/ui/ui.go (100.0%)</option>
+				
+				<option value="file25">github.com/emisgroup/auditor/pkg/auditor-cli/version.go (80.0%)</option>
+				
+				<option value="file26">github.com/emisgroup/auditor/pkg/auditor-cli/version/version.go (100.0%)</option>
+				
+				<option value="file27">github.com/emisgroup/auditor/pkg/cache/cache.go (68.5%)</option>
+				
+				<option value="file28">github.com/emisgroup/auditor/pkg/github/helpers/codeowners.go (100.0%)</option>
+				
+				<option value="file29">github.com/emisgroup/auditor/pkg/github/helpers/empty_repo.go (100.0%)</option>
+				
+				<option value="file30">github.com/emisgroup/auditor/pkg/github/helpers/helpers.go (95.5%)</option>
+				
+				<option value="file31">github.com/emisgroup/auditor/pkg/github/helpers/team.go (100.0%)</option>
+				
+				<option value="file32">github.com/emisgroup/auditor/pkg/github/helpers/topic.go (100.0%)</option>
+				
+				<option value="file33">github.com/emisgroup/auditor/pkg/github/helpers/vet.go (100.0%)</option>
+				
+				<option value="file34">github.com/emisgroup/auditor/pkg/github/progress/contribution.go (100.0%)</option>
+				
+				<option value="file35">github.com/emisgroup/auditor/pkg/github/rules/auto_privatise.go (100.0%)</option>
+				
+				<option value="file36">github.com/emisgroup/auditor/pkg/github/rules/base.go (100.0%)</option>
+				
+				<option value="file37">github.com/emisgroup/auditor/pkg/github/rules/branch_protection.go (100.0%)</option>
+				
+				<option value="file38">github.com/emisgroup/auditor/pkg/github/rules/codeowners.go (100.0%)</option>
+				
+				<option value="file39">github.com/emisgroup/auditor/pkg/github/rules/description.go (100.0%)</option>
+				
+				<option value="file40">github.com/emisgroup/auditor/pkg/github/rules/empty_repo.go (100.0%)</option>
+				
+				<option value="file41">github.com/emisgroup/auditor/pkg/github/rules/inactive_master.go (100.0%)</option>
+				
+				<option value="file42">github.com/emisgroup/auditor/pkg/github/rules/lowercase.go (100.0%)</option>
+				
+				<option value="file43">github.com/emisgroup/auditor/pkg/github/rules/readme.go (100.0%)</option>
+				
+				<option value="file44">github.com/emisgroup/auditor/pkg/github/rules/restricted_keywords.go (100.0%)</option>
+				
+				<option value="file45">github.com/emisgroup/auditor/pkg/github/rules/stale_branch.go (100.0%)</option>
+				
+				<option value="file46">github.com/emisgroup/auditor/pkg/github/rules/teams.go (100.0%)</option>
+				
+				<option value="file47">github.com/emisgroup/auditor/pkg/github/rules/too_many_branches.go (100.0%)</option>
+				
+				<option value="file48">github.com/emisgroup/auditor/pkg/github/rules/topic.go (100.0%)</option>
+				
+				<option value="file49">github.com/emisgroup/auditor/pkg/github/rules/valid_name.go (100.0%)</option>
+				
+				<option value="file50">github.com/emisgroup/auditor/pkg/github/validation/code_owners.go (100.0%)</option>
+				
+				<option value="file51">github.com/emisgroup/auditor/pkg/github/validator.go (96.8%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">package aws
+
+import(
+        "os"
+        "github.com/aws/aws-sdk-go/service/s3"
+        "github.com/aws/aws-sdk-go/service/s3/s3manager/s3manageriface"
+        aws_sdk "github.com/aws/aws-sdk-go/aws"
+)
+
+// ReadFile will read a file from aws bucket
+func ReadFile(downloader s3manageriface.DownloaderAPI, item string) ([]byte, error) <span class="cov8" title="1">{
+        requestInput := s3.GetObjectInput{
+                Bucket: aws_sdk.String(os.Getenv(bucketEnvironmentKey)),
+                Key:    aws_sdk.String(item),
+        }
+        
+        configValueBytes := aws_sdk.NewWriteAtBuffer([]byte{})
+        _, err := downloader.Download(configValueBytes, &amp;requestInput)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return configValueBytes.Bytes(), nil</span>
+}
+
+// ReadConfigFile will read the config file from aws bucket
+func ReadConfigFile(downloader s3manageriface.DownloaderAPI) ([]byte, error) <span class="cov8" title="1">{
+        return ReadFile(downloader, os.Getenv(configFileEnvironmentKey))
+}</span>
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package aws
+
+import (
+        "bytes"
+        "context"
+        "encoding/json"
+        "net/http"
+        "strings"
+
+        "github.com/aws/aws-lambda-go/events"
+        "github.com/google/go-github/v28/github"
+        "github.com/rs/zerolog"
+
+        "github.com/emisgroup/auditor/pkg/audit-bot/handler"
+)
+
+type errorResponse struct {
+        Error string `json:"error"`
+}
+
+// Handler to perform the actions
+type Handler struct {
+        EventRouter   handler.EventRouter
+        Logger        zerolog.Logger
+        WebHookSecret string
+}
+
+// RouteWebhook lambda action handler that will route the webhook event to the required event handler
+func (h *Handler) RouteWebhook(context context.Context, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) <span class="cov8" title="1">{
+        // We need to convert the events.APIGatewayProxyRequest into an http.Request to use the go-github functionality
+        httpRequest, err := h.convertRequest(req)
+        if err != nil </span><span class="cov8" title="1">{
+                return h.generateErrorResponse(http.StatusBadRequest, err), nil
+        }</span>
+
+        <span class="cov8" title="1">deliveryID := github.DeliveryID(httpRequest)
+        h.Logger = h.Logger.With().Str("github_delivery_id", deliveryID).Logger()
+
+        payload, err := github.ValidatePayload(httpRequest, []byte(h.WebHookSecret))
+        if err != nil </span><span class="cov8" title="1">{
+                return h.generateErrorResponse(http.StatusUnauthorized, err), nil
+        }</span>
+
+        <span class="cov8" title="1">eventType := github.WebHookType(httpRequest)
+
+        err = h.EventRouter.RouteEvent(eventType, payload, h.Logger)
+        if err != nil </span><span class="cov8" title="1">{
+                return h.generateErrorResponse(http.StatusBadRequest, err), nil
+        }</span>
+
+        <span class="cov8" title="1">return events.APIGatewayProxyResponse{StatusCode: http.StatusOK}, nil</span>
+}
+
+// convertRequest will convert an events.APIGatewayProxyRequest to an http.Request
+func (h *Handler) convertRequest(req events.APIGatewayProxyRequest) (*http.Request, error) <span class="cov8" title="1">{
+        httpRequest, err := http.NewRequest(
+                strings.ToUpper(req.HTTPMethod),
+                req.Path,
+                bytes.NewReader([]byte(req.Body)),
+        )
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">for header := range req.Headers </span><span class="cov8" title="1">{
+                httpRequest.Header.Add(header, req.Headers[header])
+        }</span>
+
+        <span class="cov8" title="1">return httpRequest, nil</span>
+}
+
+// generateErrorResponse will generate an API Gateway error response given an HTTP code and error object
+func (h *Handler) generateErrorResponse(statusCode int, err error) events.APIGatewayProxyResponse <span class="cov8" title="1">{
+        h.Logger.Debug().Msg(err.Error())
+        body, _ := json.Marshal(
+                errorResponse{
+                        Error: err.Error(),
+                },
+        )
+        return events.APIGatewayProxyResponse{
+                StatusCode: statusCode,
+                Body:       string(body),
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file2" style="display: none">package aws
+
+import (
+        "encoding/json"
+        "fmt"
+        "strings"
+        "os"
+
+        "github.com/aws/aws-sdk-go/aws"
+        "github.com/aws/aws-sdk-go/service/secretsmanager"
+        "github.com/aws/aws-sdk-go/service/secretsmanager/secretsmanageriface"
+)
+
+// Credentials represents the audit bot GitHub app credentials
+type Credentials struct {
+        IntegrationID string `json:"integration_id"`
+        WebhookSecret string `json:"webhook_secret"`
+        PrivateKey    string `json:"private_key"`
+}
+
+// GetCredentials returns the credentials for the audit bot GitHub app from AWS Secrets Manager
+func GetCredentials(svc secretsmanageriface.SecretsManagerAPI) (*Credentials, error) <span class="cov8" title="1">{
+        input := &amp;secretsmanager.GetSecretValueInput{
+                SecretId:     aws.String(os.Getenv(secretIDEnvironmentKey)),
+                VersionStage: aws.String("AWSCURRENT"), // VersionStage defaults to AWSCURRENT if unspecified
+        }
+
+        result, err := svc.GetSecretValue(input)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">if result.SecretString == nil </span><span class="cov8" title="1">{
+                return nil, fmt.Errorf("Secret string empty")
+        }</span>
+
+        <span class="cov8" title="1">var credentials Credentials
+        err = json.Unmarshal([]byte(*result.SecretString), &amp;credentials)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        // The PEM in Secrets Manager cannot have carriage returns, so we must store it with the "\n" string
+        // and convert the CRs back here
+        <span class="cov8" title="1">credentials.PrivateKey = strings.ReplaceAll(credentials.PrivateKey, "\\n", "\n")
+
+        return &amp;credentials, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file3" style="display: none">package handler
+
+import (
+        "context"
+        "fmt"
+
+        gogithub "github.com/google/go-github/v28/github"
+        "github.com/jonboulle/clockwork"
+        "github.com/rs/zerolog"
+
+        "github.com/emisgroup/auditor/pkg/auditor-cli/ui"
+        "github.com/emisgroup/auditor/pkg/config"
+        "github.com/emisgroup/auditor/pkg/github"
+        "github.com/emisgroup/auditor/pkg/github/client"
+)
+
+// CheckRunHandler represents the pull_request webhook handler
+type CheckRunHandler struct {
+        ClientCreator client.Creator
+        Validator     github.Validator
+        Clock         clockwork.Clock
+}
+
+type checkRunResults struct {
+        status     string
+        conclusion string
+        title      string
+        summary    string
+}
+
+// Handles indicates that this will handle the pull_request webhook
+func (h *CheckRunHandler) Handles() string <span class="cov8" title="1">{
+        return "check_run"
+}</span>
+
+// Handle will handle the check_run webhook
+func (h *CheckRunHandler) Handle(event interface{}, logger zerolog.Logger) error <span class="cov8" title="1">{
+        crEvent := event.(*gogithub.CheckRunEvent)
+
+        ctx := context.Background()
+        repo := crEvent.GetRepo()
+        checkRun := crEvent.GetCheckRun()
+        action := crEvent.GetAction()
+        installationID := crEvent.GetInstallation().GetID()
+
+        logger = logger.With().Str("github_repo", repo.GetName()).Logger()
+        logger = logger.With().Int64("github_check_run_id", checkRun.GetID()).Logger()
+        logger = logger.With().Str("github_action", action).Logger()
+        logger = logger.With().Int64("github_installation_id", installationID).Logger()
+
+        if action != "created" &amp;&amp; action != "rerequested" </span><span class="cov8" title="1">{
+                logger.Debug().Msgf("Ignoring event action")
+                return nil
+        }</span>
+
+        <span class="cov8" title="1">client, err := h.ClientCreator.NewInstallationClient(installationID)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">results, err := h.validateRepo(client, crEvent)
+        if err != nil </span><span class="cov8" title="1">{
+                results.conclusion = "failure"
+                results.title = "Error"
+                results.summary = fmt.Sprintf("An error has occurred whilst validating the repo: %s", err.Error())
+                results.status = "completed"
+        }</span>
+
+        <span class="cov8" title="1">options := gogithub.UpdateCheckRunOptions{
+                Name:        checkRun.GetName(),
+                Status:      &amp;results.status,
+                Conclusion:  &amp;results.conclusion,
+                CompletedAt: &amp;gogithub.Timestamp{Time: h.Clock.Now()},
+                Output: &amp;gogithub.CheckRunOutput{
+                        Title:   &amp;results.title,
+                        Summary: &amp;results.summary,
+                },
+        }
+
+        _, _, err = client.Checks.UpdateCheckRun(ctx, repo.GetOwner().GetLogin(), repo.GetName(), *checkRun.ID, options)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">logger.Debug().Msgf("Check run updated")
+
+        return nil</span>
+}
+
+// validateRepo will validate the repo according to the audit validator rules
+func (h *CheckRunHandler) validateRepo(client *client.GitHubClient, crEvent *gogithub.CheckRunEvent) (checkRunResults, error) <span class="cov8" title="1">{
+        ctx := context.Background()
+        repo := crEvent.GetRepo()
+        repoOwner := crEvent.GetRepo().GetOwner().GetLogin()
+        checkRun := crEvent.GetCheckRun()
+        headRef := checkRun.GetHeadSHA()
+
+        rules, err := h.Validator.GetRules(ctx, *client, repoOwner, repo, headRef)
+        if err != nil </span><span class="cov8" title="1">{
+                return checkRunResults{}, fmt.Errorf("Failed to get the rules: %s", err)
+        }</span>
+
+        <span class="cov8" title="1">report, err := h.Validator.ValidateRules(rules)
+        if err != nil </span><span class="cov8" title="1">{
+                return checkRunResults{}, fmt.Errorf("Failed to validate the rules: %s", err)
+        }</span>
+
+        <span class="cov8" title="1">var results checkRunResults
+        if report.OverallStatus == config.StatusPass </span><span class="cov8" title="1">{
+                results.title = "Passed audit"
+                results.conclusion = "success"
+        }</span> else<span class="cov8" title="1"> {
+                results.conclusion = "failure"
+                results.title = "Failed audit"
+        }</span>
+
+        <span class="cov8" title="1">if len(report.Rules) != 0 </span><span class="cov8" title="1">{
+                for _, ruleReport := range report.Rules </span><span class="cov8" title="1">{
+                        note := fmt.Sprintf("%s %s (%s)\n", ui.ConvertLogLevelToUI(ruleReport.Level), ruleReport.Note, ruleReport.Reason)
+                        results.summary = results.summary + note
+                }</span>
+        }
+
+        <span class="cov8" title="1">results.status = "completed"
+
+        return results, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file4" style="display: none">package handler
+
+import (
+        "context"
+
+        gogithub "github.com/google/go-github/v28/github"
+        "github.com/rs/zerolog"
+
+        "github.com/emisgroup/auditor/pkg/config"
+        "github.com/emisgroup/auditor/pkg/github/client"
+)
+
+// CheckSuiteHandler represents the pull_request webhook handler
+type CheckSuiteHandler struct {
+        ClientCreator client.Creator
+}
+
+// Handles indicates that this will handle the pull_request webhook
+func (h *CheckSuiteHandler) Handles() string <span class="cov8" title="1">{
+        return "check_suite"
+}</span>
+
+// Handle will handle the check_run webhook
+func (h *CheckSuiteHandler) Handle(event interface{}, logger zerolog.Logger) error <span class="cov8" title="1">{
+        csEvent := event.(*gogithub.CheckSuiteEvent)
+
+        ctx := context.Background()
+        repo := csEvent.GetRepo()
+        checkSuite := csEvent.GetCheckSuite()
+        action := csEvent.GetAction()
+        installationID := csEvent.GetInstallation().GetID()
+
+        logger = logger.With().Str("github_repo", repo.GetName()).Logger()
+        logger = logger.With().Int64("github_check_suite_id", checkSuite.GetID()).Logger()
+        logger = logger.With().Str("github_action", action).Logger()
+        logger = logger.With().Int64("github_installation_id", installationID).Logger()
+
+        if action != "rerequested" </span><span class="cov8" title="1">{
+                logger.Debug().Msgf("Ignoring event action")
+                return nil
+        }</span>
+
+        <span class="cov8" title="1">pullRequestCount := len(checkSuite.PullRequests)
+
+        // Do not run checks if the PR is not merging into default branch of the repo
+        if pullRequestCount == 0 </span><span class="cov8" title="1">{
+                logger.Debug().Msgf("Ignoring because PR count is %d", pullRequestCount)
+                return nil
+        }</span>
+
+        <span class="cov8" title="1">pr := checkSuite.PullRequests[0]
+        logger = logger.With().Int("github_pull_request_id", pr.GetNumber()).Logger()
+
+        // No need to run checks if not merging into default branch
+        if pr.GetBase().GetRef() != repo.GetDefaultBranch() </span><span class="cov8" title="1">{
+                logger.Debug().Msgf("Ignoring because PR base branch %s, is not repo default branch %s", pr.GetBase().GetRef(), repo.GetDefaultBranch())
+                return nil
+        }</span>
+
+        <span class="cov8" title="1">client, err := h.ClientCreator.NewInstallationClient(installationID)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">repoOwner := repo.GetOwner().GetLogin()
+        repoName := repo.GetName()
+
+        config.LoadConfig()
+        options := gogithub.CreateCheckRunOptions{
+                Name:       config.Root.GitHubApp.CheckRun.Name,
+                HeadSHA:    checkSuite.GetHeadSHA(),
+                DetailsURL: &amp;config.Root.GitHubApp.CheckRun.DetailsURL,
+        }
+
+        checkRun, _, err := client.Checks.CreateCheckRun(ctx, repoOwner, repoName, options)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">logger = logger.With().Int64("github_check_run_id", checkRun.GetID()).Logger()
+        logger.Debug().Msgf("Check run created")
+
+        return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file5" style="display: none">package handler
+
+import (
+        "context"
+
+        "github.com/google/go-github/v28/github"
+        "github.com/rs/zerolog"
+
+        "github.com/emisgroup/auditor/pkg/config"
+        "github.com/emisgroup/auditor/pkg/github/client"
+)
+
+// PullRequestHandler represents the pull_request webhook handler
+type PullRequestHandler struct {
+        ClientCreator client.Creator
+}
+
+// Handles indicates that this will handle the pull_request webhook
+func (h *PullRequestHandler) Handles() string <span class="cov8" title="1">{
+        return "pull_request"
+}</span>
+
+// Handle will handle the pull_request webhook
+func (h *PullRequestHandler) Handle(event interface{}, logger zerolog.Logger) error <span class="cov8" title="1">{
+        prEvent := event.(*github.PullRequestEvent)
+
+        repo := prEvent.GetRepo()
+        pr := prEvent.GetPullRequest()
+        action := prEvent.GetAction()
+        installationID := prEvent.GetInstallation().GetID()
+
+        logger = logger.With().Str("github_repo", repo.GetName()).Logger()
+        logger = logger.With().Int("github_pull_request_id", pr.GetNumber()).Logger()
+        logger = logger.With().Str("github_action", action).Logger()
+        logger = logger.With().Int64("github_installation_id", installationID).Logger()
+
+        if action != "opened" &amp;&amp; action != "reopened" &amp;&amp; action != "synchronize" </span><span class="cov8" title="1">{
+                logger.Debug().Msgf("Ignoring event action")
+                return nil
+        }</span>
+
+        // Do not run checks if the PR is not merging into default branch of the repo
+        <span class="cov8" title="1">if pr.GetBase().GetRef() != repo.GetDefaultBranch() </span><span class="cov8" title="1">{
+                logger.Debug().Msgf("Ignoring because PR base branch %s, is not repo default branch %s", pr.GetBase().GetRef(), repo.GetDefaultBranch())
+                return nil
+        }</span>
+
+        <span class="cov8" title="1">client, err := h.ClientCreator.NewInstallationClient(installationID)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">ctx := context.Background()
+        repoOwner := repo.GetOwner().GetLogin()
+        repoName := repo.GetName()
+
+        config.LoadConfig()
+        options := github.CreateCheckRunOptions{
+                Name:       config.Root.GitHubApp.CheckRun.Name,
+                HeadSHA:    *pr.Head.SHA,
+                DetailsURL: &amp;config.Root.GitHubApp.CheckRun.DetailsURL,
+        }
+
+        checkRun, _, err := client.Checks.CreateCheckRun(ctx, repoOwner, repoName, options)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">logger = logger.With().Int64("github_check_run_id", checkRun.GetID()).Logger()
+        logger.Debug().Msgf("Check run created")
+
+        return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file6" style="display: none">package handler
+
+import (
+        "github.com/google/go-github/v28/github"
+        "github.com/rs/zerolog"
+)
+
+// EventHandler interface is used to process a GitHub webhook event type
+type EventHandler interface {
+        // Handles returns the GitHub event that this handler handles
+        Handles() string
+
+        // Handle processes the GitHub event
+        Handle(event interface{}, logger zerolog.Logger) error
+}
+
+// EventRouter will route webhook event types to their required handler
+type EventRouter interface {
+        RouteEvent(eventType string, payload []byte, logger zerolog.Logger) error
+}
+
+type eventRouter struct {
+        handlerMap map[string]EventHandler
+}
+
+// NewEventRouter returns an event router for webhook events
+func NewEventRouter(handlers ...EventHandler) EventRouter <span class="cov8" title="1">{
+        handlerMap := make(map[string]EventHandler)
+
+        for _, handler := range handlers </span><span class="cov8" title="1">{
+                handlerMap[handler.Handles()] = handler
+        }</span>
+
+        <span class="cov8" title="1">return &amp;eventRouter{
+                handlerMap: handlerMap,
+        }</span>
+}
+
+// RouteEvent routes the event type given to the required handler
+func (ed *eventRouter) RouteEvent(eventType string, payload []byte, logger zerolog.Logger) error <span class="cov8" title="1">{
+        event, err := github.ParseWebHook(eventType, payload)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">logger = logger.With().Str("github_event_type", eventType).Logger()
+
+        eventHandler := ed.handlerMap[eventType]
+        if eventHandler == nil </span><span class="cov0" title="0">{
+                return nil
+        }</span>
+
+        <span class="cov8" title="1">err = eventHandler.Handle(event, logger)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file7" style="display: none">package handler
+
+import (
+        "context"
+
+        "github.com/rs/zerolog"
+
+        event_handler "github.com/emisgroup/auditor/pkg/audit-bot/handler"
+)
+
+// GenericHandler represents our webhook handler
+type GenericHandler struct {
+        event_handler.EventRouter
+        zerolog.Logger
+}
+
+// Handles indicates that this will handle the pull_request, check_suite &amp; check_run webhooks
+func (h *GenericHandler) Handles() []string <span class="cov8" title="1">{
+        return []string{
+                "pull_request",
+                "check_suite",
+                "check_run",
+        }
+}</span>
+
+// Handle will pass the webhook payload to our webhook event router
+func (h *GenericHandler) Handle(ctx context.Context, eventType, deliveryID string, payload []byte) error <span class="cov8" title="1">{
+        err := h.EventRouter.RouteEvent(eventType, payload, h.Logger)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file8" style="display: none">package cmd
+
+import (
+        "github.com/spf13/cobra"
+)
+
+// NewCompletionCommand creates a new `completion` command
+func NewCompletionCommand(root *cobra.Command) *cobra.Command <span class="cov8" title="1">{
+        location := "/tmp/auditor.sh"
+        cmd := &amp;cobra.Command{
+                Use:    "completion",
+                Short:  "Generates the bash completion script: " + location,
+                Hidden: true,
+                RunE: func(cmd *cobra.Command, args []string) error </span><span class="cov0" title="0">{
+                        return root.GenBashCompletionFile(location)
+                }</span>,
+        }
+        <span class="cov8" title="1">return cmd</span>
+}
+</pre>
+		
+		<pre class="file" id="file9" style="display: none">package github
+
+import (
+        "bufio"
+        "bytes"
+        "context"
+        "fmt"
+        "html/template"
+        "io"
+        "os"
+
+        goconfluence "github.com/cseeger-epages/confluence-go-api"
+        "github.com/emisgroup/auditor/pkg/config"
+        "github.com/emisgroup/auditor/pkg/confluence"
+        "github.com/emisgroup/auditor/pkg/github"
+        "github.com/emisgroup/auditor/pkg/github/client"
+        gogithub "github.com/google/go-github/v28/github"
+        "github.com/spf13/cobra"
+        "github.com/spf13/viper"
+)
+
+// DocumentOptions provides the flags for the `rules` command
+type DocumentOptions struct {
+        Writer string
+        refs   []string
+}
+
+type vetRule struct {
+        Type        string
+        Description string
+        DateActive  string
+}
+
+type vetRules struct {
+        Active []vetRule
+        Future []vetRule
+}
+
+type writeStrategy interface {
+        Write(vetRules vetRules) error
+}
+
+type documentWriter struct {
+        Strategy writeStrategy
+}
+
+// Write will write the data out given a specific strategy
+func (pw *documentWriter) Write(vetRules vetRules) error <span class="cov8" title="1">{
+        return pw.Strategy.Write(vetRules)
+}</span>
+
+type stdWriter struct {
+        w io.Writer
+}
+
+// Write will send data to stdout
+func (s stdWriter) Write(vetRules vetRules) error <span class="cov8" title="1">{
+        fmt.Fprintf(s.w, "Active vet rules\n================\n\n")
+        for _, vetRule := range vetRules.Active </span><span class="cov8" title="1">{
+                fmt.Fprintf(s.w, "%s\n", vetRule.Description)
+        }</span>
+
+        <span class="cov8" title="1">if len(vetRules.Future) &gt; 0 </span><span class="cov8" title="1">{
+                fmt.Fprintf(s.w, "\nFuture vet rules\n================\n\n")
+                for _, vetRule := range vetRules.Future </span><span class="cov8" title="1">{
+                        fmt.Fprintf(s.w, "%s (active from %s)\n", vetRule.Description, vetRule.DateActive)
+                }</span>
+        }
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+type confluenceWriter struct {
+        api confluence.API
+        w   io.Writer
+}
+
+// Write will update a confluence page with the auditor documentation
+func (c confluenceWriter) Write(vetRules vetRules) error <span class="cov8" title="1">{
+        // Generate the HTML for the auditor rules Confluence page
+        var tpl = "&lt;h2&gt;Active vet rules&lt;/h2&gt;" +
+                "&lt;ul&gt;{{range .Active}}&lt;li&gt;{{ .Description }}&lt;/li&gt;{{end}}&lt;/ul&gt;"
+
+        if len(vetRules.Future) &gt; 0 </span><span class="cov8" title="1">{
+                tpl = tpl + "&lt;h2&gt;Future vet rules&lt;/h2&gt;" +
+                        "&lt;ul&gt;{{range .Future}}&lt;li&gt;{{ .Description }} (active from {{ .DateActive}})&lt;/li&gt;{{end}}&lt;/ul&gt;"
+        }</span>
+
+        <span class="cov8" title="1">t, err := template.New("confluence").Parse(tpl)
+        if err != nil </span><span class="cov0" title="0">{
+                return fmt.Errorf("Error parsing HTML template for Confluence page: %s", err.Error())
+        }</span>
+
+        <span class="cov8" title="1">var newPageContent bytes.Buffer
+        writer := bufio.NewWriter(&amp;newPageContent)
+
+        err = t.Execute(writer, vetRules)
+        if err != nil </span><span class="cov0" title="0">{
+                return fmt.Errorf("Error generating HTML for Confluence page: %s", err.Error())
+        }</span>
+        <span class="cov8" title="1">err = writer.Flush()
+        if err != nil </span><span class="cov0" title="0">{
+                return fmt.Errorf("Error writing HTML for Confluence page: %s", err.Error())
+        }</span>
+
+        <span class="cov8" title="1">config.LoadConfig()
+
+        // Get the Active Rules Confluence page
+        currentPage, err := c.api.GetContentByID(config.Root.Atlassian.Confluence.PageID)
+        if err != nil </span><span class="cov8" title="1">{
+                return fmt.Errorf("Error fetching current Confluence page: %s", err.Error())
+        }</span>
+
+        // Update the Active Rules Confluence page
+        <span class="cov8" title="1">version := currentPage.Version.Number + 1
+        page := &amp;goconfluence.Content{
+                ID:    config.Root.Atlassian.Confluence.PageID,
+                Type:  "page",
+                Title: "Auditor vet rules",
+                Body: goconfluence.Body{
+                        Storage: goconfluence.Storage{
+                                Value:          newPageContent.String(),
+                                Representation: "storage",
+                        },
+                },
+                Version: goconfluence.Version{
+                        Number: version,
+                },
+                Space: goconfluence.Space{
+                        Key: config.Root.Atlassian.Confluence.SpaceKey,
+                },
+        }
+
+        _, err = c.api.UpdateContent(page)
+        if err != nil </span><span class="cov8" title="1">{
+                return fmt.Errorf("Error updating Confluence page: %s", err.Error())
+        }</span>
+
+        <span class="cov8" title="1">fmt.Fprintf(c.w, "Updated Confluence\n")
+        fmt.Fprintf(c.w, "Space: %s\n", config.Root.Atlassian.Confluence.SpaceKey)
+        fmt.Fprintf(c.w, "Page ID: %s\n", config.Root.Atlassian.Confluence.PageID)
+        fmt.Fprintf(c.w, "Version: %d\n", version)
+
+        return nil</span>
+}
+
+// NewGitHubDocumentCommand creates a new `rules` command
+func NewGitHubDocumentCommand(ctx context.Context, gh client.GitHubClient) *cobra.Command <span class="cov8" title="1">{
+        var opts DocumentOptions
+
+        cmd := &amp;cobra.Command{
+                Use:   "rules",
+                Short: "Displays the active vet rules",
+                RunE: func(cmd *cobra.Command, args []string) error </span><span class="cov0" title="0">{
+                        api, err := confluence.NewAPI()
+                        if err != nil </span><span class="cov0" title="0">{
+                                return fmt.Errorf("Error accessing Confluence: %s", err.Error())
+                        }</span>
+                        <span class="cov0" title="0">validator := github.AuditValidator{}
+                        opts.refs = args
+                        return Documentation(ctx, gh, api, validator, opts, os.Stdout)</span>
+                },
+        }
+
+        <span class="cov8" title="1">flags := cmd.Flags()
+        flags.StringVar(&amp;opts.Writer, "writer", "", "Where we should write the data to. empty is the stdout, other options: confluence")
+
+        return cmd</span>
+}
+
+// Documentation outputs the documentation for the auditor
+func Documentation(ctx context.Context, gh client.GitHubClient, conf confluence.API, validator github.Validator, opts DocumentOptions, w io.Writer) error <span class="cov8" title="1">{
+        githubOrg := viper.GetString("GITHUB_ORG")
+        repository := gogithub.Repository{}
+
+        rules, err := validator.GetRules(ctx, gh, githubOrg, &amp;repository, "")
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "Failed to get repo: %s", err)
+                return err
+        }</span>
+
+        <span class="cov8" title="1">var vetRules vetRules
+        for _, rule := range rules </span><span class="cov8" title="1">{
+                isRuleActive, err := rule.IsActive()
+                if err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+                <span class="cov8" title="1">activeDate, err := rule.GetActiveDate()
+                if err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+
+                <span class="cov8" title="1">vetRule := vetRule{
+                        Type:        rule.GetType(),
+                        Description: rule.GetDescription(),
+                        DateActive:  activeDate.Format("02 Jan 2006"),
+                }
+
+                if isRuleActive </span><span class="cov8" title="1">{
+                        vetRules.Active = append(vetRules.Active, vetRule)
+                }</span> else<span class="cov8" title="1"> {
+                        vetRules.Future = append(vetRules.Future, vetRule)
+                }</span>
+        }
+
+        <span class="cov8" title="1">var writer documentWriter
+        if opts.Writer == "confluence" </span><span class="cov8" title="1">{
+                writer = documentWriter{Strategy: confluenceWriter{api: conf, w: w}}
+        }</span> else<span class="cov8" title="1"> {
+                writer = documentWriter{Strategy: stdWriter{w: w}}
+        }</span>
+
+        <span class="cov8" title="1">err = writer.Write(vetRules)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file10" style="display: none">package github
+
+import (
+        "github.com/emisgroup/auditor/pkg/auditor-cli/github/repo"
+        "github.com/emisgroup/auditor/pkg/auditor-cli/github/team"
+        "github.com/emisgroup/auditor/pkg/auditor-cli/github/user"
+        "github.com/emisgroup/auditor/pkg/github/client"
+
+        "github.com/spf13/cobra"
+)
+
+// NewGitHubCommand will add a `github` command which will add all the repo sub commands
+func NewGitHubCommand() *cobra.Command <span class="cov8" title="1">{
+        ctx, httpClient := client.NewHTTPClient()
+        githubClient := client.NewGitHubClient(httpClient)
+
+        cmd := &amp;cobra.Command{
+                Use:   "github",
+                Short: "GitHub related commands",
+        }
+
+        cmd.AddCommand(
+                repo.NewGitHubRepoCommand(ctx, githubClient),
+                team.NewGitHubTeamCommand(ctx, githubClient),
+                user.NewGitHubUserCommand(ctx, githubClient),
+                NewGitHubDocumentCommand(ctx, githubClient),
+        )
+
+        return cmd
+}</span>
+</pre>
+		
+		<pre class="file" id="file11" style="display: none">package repo
+
+import (
+        "context"
+        "fmt"
+        "os"
+
+        "github.com/emisgroup/auditor/pkg/cache"
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/spf13/cobra"
+)
+
+// NewGitHubRepoCacheClearCommand will add a `github repo cache-clear` command which is responsible for clearing the
+// cache for a repo
+func NewGitHubRepoCacheClearCommand(ctx context.Context, gh client.GitHubClient) *cobra.Command <span class="cov8" title="1">{
+        var repoName string
+
+        cmd := &amp;cobra.Command{
+                Use:   "cache-clear",
+                Short: "Clear the cache for a repo, leave repo blank to clear all cache",
+                Args:  cobra.MaximumNArgs(1),
+                RunE: func(cmd *cobra.Command, args []string) error </span><span class="cov0" title="0">{
+                        if len(args) &gt; 0 </span><span class="cov0" title="0">{
+                                repoName = GetName(args[0])
+                        }</span>
+                        <span class="cov0" title="0">apiCache := cache.New(repoName)
+                        return ClearCache(ctx, gh, apiCache, repoName)</span>
+                },
+        }
+
+        <span class="cov8" title="1">return cmd</span>
+}
+
+// ClearCache will clear the cache for a repo
+func ClearCache(ctx context.Context, gh client.GitHubClient, apiCache cache.Cache, repoName string) error <span class="cov8" title="1">{
+        var repoNames []string
+        var err error
+
+        if repoName == "" </span><span class="cov8" title="1">{
+                var listOpts ListOptions
+                repoNames, err = GetRepos(ctx, gh, listOpts, os.Stdout)
+                if err != nil </span><span class="cov8" title="1">{
+                        return err
+                }</span>
+        } else<span class="cov8" title="1"> {
+                repoNames = append(repoNames, repoName)
+        }</span>
+
+        <span class="cov8" title="1">for _, repoName := range repoNames </span><span class="cov8" title="1">{
+                apiCache.SetRepoName(repoName)
+                err := apiCache.Clear()
+                if err != nil </span><span class="cov8" title="1">{
+                        fmt.Fprintf(os.Stderr, "Failed to clear the cache for repo '%s': %s", repoName, err)
+                        return err
+                }</span>
+        }
+
+        <span class="cov8" title="1">return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file12" style="display: none">package repo
+
+import (
+        "context"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/spf13/cobra"
+)
+
+// NewGitHubRepoCommand will add a `github repo` command which will add all the repo sub commands
+func NewGitHubRepoCommand(ctx context.Context, gh client.GitHubClient) *cobra.Command <span class="cov8" title="1">{
+        cmd := &amp;cobra.Command{
+                Use:   "repo",
+                Short: "Repo related commands",
+        }
+
+        cmd.AddCommand(
+                NewGitHubRepoListCommand(ctx, gh),
+                NewGitHubGetInspectCommand(ctx, gh),
+                NewGitHubVetCommand(ctx, gh),
+                NewGitHubRepoProgressCommand(ctx, gh),
+                NewGitHubRepoCacheClearCommand(ctx, gh),
+        )
+
+        return cmd
+}</span>
+</pre>
+		
+		<pre class="file" id="file13" style="display: none">package repo
+
+import (
+        "context"
+        "fmt"
+        "io"
+        "os"
+        "sort"
+        "strings"
+        "sync"
+        "time"
+
+        "github.com/dustin/go-humanize"
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/google/go-github/v28/github"
+        "github.com/spf13/cobra"
+        "github.com/spf13/viper"
+)
+
+// BranchDetails gives us a struct to store details
+type BranchDetails struct {
+        branchName       string
+        lastCommitedTime time.Time
+}
+
+// NewGitHubGetInspectCommand will add a `github repo inspect` command which is responsible
+// for showing detailed information about a given repo
+func NewGitHubGetInspectCommand(ctx context.Context, gh client.GitHubClient) *cobra.Command <span class="cov8" title="1">{
+        cmd := &amp;cobra.Command{
+                Use:   "inspect",
+                Short: "Get more information about a repo such as languages and build tools used",
+                Args:  cobra.ExactArgs(1),
+                Run: func(cmd *cobra.Command, args []string) </span><span class="cov0" title="0">{
+                        err := InspectRepo(ctx, gh, GetName(args[0]), os.Stdout)
+                        if err != nil </span><span class="cov0" title="0">{
+                                os.Exit(1)
+                        }</span>
+                },
+        }
+
+        <span class="cov8" title="1">return cmd</span>
+}
+
+// InspectRepo will inspect the github repo for information we want to know
+func InspectRepo(ctx context.Context, gh client.GitHubClient, repoName string, w io.Writer) error <span class="cov8" title="1">{
+        githubOrg := viper.GetString("GITHUB_ORG")
+
+        fmt.Fprintln(w, repoName)
+        fmt.Fprintln(w, strings.Repeat("=", len(repoName)))
+        fmt.Fprintln(w)
+
+        topics, _, err := gh.Repositories.ListAllTopics(ctx, githubOrg, repoName)
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "Failed to list topics for repo '%s': %s", repoName, err)
+                return err
+        }</span>
+
+        <span class="cov8" title="1">first := true
+        for _, topic := range topics </span><span class="cov8" title="1">{
+                if !first </span><span class="cov8" title="1">{
+                        fmt.Fprintf(w, " ")
+                }</span>
+                <span class="cov8" title="1">first = false
+                fmt.Fprintf(w, "[%s]", topic)</span>
+        }
+
+        <span class="cov8" title="1">fmt.Fprintln(w)
+
+        languages, _, err := gh.Repositories.ListLanguages(ctx, githubOrg, repoName)
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "Failed to list langages for repo '%s': %s", repoName, err)
+                return err
+        }</span>
+
+        <span class="cov8" title="1">total := float32(sum(languages))
+
+        fmt.Fprintf(w, "\nLanguages\n=========\n\n")
+
+        for _, language := range orderStringAndIntByValue(languages) </span><span class="cov8" title="1">{
+                fmt.Fprintf(w, "- %s (%0.1f%%)\n", language.name, calculatePercentage(language.number, total))
+        }</span>
+
+        <span class="cov8" title="1">fmt.Fprintf(w, "\nBuild tools\n===========\n\n")
+        tools := map[string]string{
+                "Jenkinsfile":          "Jenkins",
+                ".travis.yml":          "TravisCI",
+                ".circleci/config.yml": "CircleCI",
+                "azure-pipelines.yml":  "Azure Pipelines",
+        }
+
+        foundTool := false
+        for file, tool := range tools </span><span class="cov8" title="1">{
+                opts := github.RepositoryContentGetOptions{}
+                _, _, _, err = gh.Repositories.GetContents(ctx, githubOrg, repoName, file, &amp;opts)
+                if err == nil </span><span class="cov8" title="1">{
+                        foundTool = true
+                        fmt.Fprintf(w, "- %s\n", tool)
+                }</span>
+        }
+
+        <span class="cov8" title="1">if foundTool == false </span><span class="cov8" title="1">{
+                fmt.Fprintf(w, "- None\n")
+        }</span>
+
+        <span class="cov8" title="1">fmt.Fprintf(w, "\nContributors\n============\n\n")
+
+        contributorOpts := github.ListContributorsOptions{}
+        contributors, _, err := gh.Repositories.ListContributors(ctx, githubOrg, repoName, &amp;contributorOpts)
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "Unable to get list of contributors for repo: %s", err)
+                return err
+        }</span>
+        <span class="cov8" title="1">for _, contributor := range contributors </span><span class="cov8" title="1">{
+                fmt.Fprintf(w, "- %s (%d)\n", contributor.GetLogin(), contributor.GetContributions())
+        }</span>
+
+        <span class="cov8" title="1">fmt.Fprintf(w, "\nUsers with access\n=================\n\n")
+
+        userOpts := github.ListCollaboratorsOptions{}
+        users, _, err := gh.Repositories.ListCollaborators(ctx, githubOrg, repoName, &amp;userOpts)
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "Unable to get list of users for repo: %s", err)
+                return err
+        }</span>
+        <span class="cov8" title="1">for _, user := range users </span><span class="cov8" title="1">{
+                fmt.Fprintf(w, "- %s\n", user.GetLogin())
+        }</span>
+
+        <span class="cov8" title="1">fmt.Fprintf(w, "\nLast commit\n===========\n\n")
+
+        opt := &amp;github.ListOptions{PerPage: 50}
+        branches, _, err := gh.Repositories.ListBranches(ctx, githubOrg, repoName, opt)
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "Unable to get branches for repo: %s", err)
+                return err
+        }</span>
+
+        <span class="cov8" title="1">var wg sync.WaitGroup
+        chanBranch := make(chan BranchDetails)
+        go func() </span><span class="cov8" title="1">{
+                wg.Wait()
+                close(chanBranch)
+        }</span>()
+
+        <span class="cov8" title="1">for _, branch := range branches </span><span class="cov8" title="1">{
+                wg.Add(1)
+                go getLastCommitOnBranch(ctx, githubOrg, repoName, w, branch, gh, &amp;wg, chanBranch)
+        }</span>
+        <span class="cov8" title="1">var branch []BranchDetails
+        for r := range chanBranch </span><span class="cov8" title="1">{
+                branch = append(branch, r)
+        }</span>
+        <span class="cov8" title="1">sort.Slice(branch, func(i, j int) bool </span><span class="cov8" title="1">{ return branch[i].branchName &lt; branch[j].branchName }</span>)
+        <span class="cov8" title="1">for _, r := range branch </span><span class="cov8" title="1">{
+                fmt.Fprintf(w, "- %s - %s \n", r.branchName, humanize.Time(r.lastCommitedTime))
+        }</span>
+
+        <span class="cov8" title="1">wg.Wait()
+
+        fmt.Fprintf(w, "\nTeams\n=====\n\n")
+        for </span><span class="cov8" title="1">{
+                optTeams := &amp;github.ListOptions{}
+                teams, response, err := gh.Repositories.ListTeams(ctx, githubOrg, repoName, optTeams)
+                if err != nil </span><span class="cov0" title="0">{
+                        fmt.Fprintf(os.Stderr, "Unable to get teams for repo: %s", err)
+                        return err
+                }</span>
+                <span class="cov8" title="1">for _, team := range teams </span><span class="cov8" title="1">{
+                        fmt.Fprintf(w, "- %s - %s\n", team.GetName(), team.GetPermission())
+                }</span>
+                <span class="cov8" title="1">if response.NextPage == 0 </span><span class="cov8" title="1">{
+                        break</span>
+                }
+                <span class="cov0" title="0">optTeams.Page = response.NextPage</span>
+        }
+
+        <span class="cov8" title="1">fmt.Fprintln(w, "")
+        return nil</span>
+}
+
+// getLastCommitOnBranch will fetch the last commit on the branch
+func getLastCommitOnBranch(ctx context.Context, githubOrg string, repoName string, w io.Writer, branch *github.Branch, gh client.GitHubClient, wg *sync.WaitGroup, chanBranch chan BranchDetails) error <span class="cov8" title="1">{
+
+        branchName := branch.GetName()
+        commitSha := branch.GetCommit().SHA
+
+        commitOpts := github.CommitsListOptions{SHA: *commitSha}
+        commits, _, err := gh.Repositories.ListCommits(ctx, githubOrg, repoName, &amp;commitOpts)
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Fprintf(os.Stderr, "Unable to get commits for repo branch '%s': %s", branchName, err)
+                wg.Done()
+                return err
+        }</span>
+
+        // Get the top/first commit
+        <span class="cov8" title="1">commit := commits[0]
+        lastCommitedDateTime := commit.GetCommit().GetAuthor().GetDate()
+
+        chanBranch &lt;- BranchDetails{
+                branchName:       branchName,
+                lastCommitedTime: lastCommitedDateTime,
+        }
+
+        wg.Done()
+
+        return nil</span>
+}
+
+// sum will return the total count of the integers in a given map
+func sum(values map[string]int) float32 <span class="cov8" title="1">{
+        count := 0
+        for _, val := range values </span><span class="cov8" title="1">{
+                count += val
+        }</span>
+        <span class="cov8" title="1">return float32(count)</span>
+}
+
+// calculatePercentage will calculate the percentage
+func calculatePercentage(lines int, total float32) float32 <span class="cov8" title="1">{
+        return (float32(lines) / total * 100)
+}</span>
+
+type stringAndInt struct {
+        name   string
+        number int
+}
+
+// Order the slice of stringAndInt by the integer values (descending)
+func orderStringAndIntByValue(stringToInt map[string]int) []stringAndInt <span class="cov8" title="1">{
+        intToString := map[int]string{}
+        intsDescending := []int{}
+        for key, value := range stringToInt </span><span class="cov8" title="1">{
+                intToString[value] = key
+                intsDescending = append(intsDescending, value)
+        }</span>
+        <span class="cov8" title="1">sort.Sort(sort.Reverse(sort.IntSlice(intsDescending)))
+
+        stringToIntDescending := []stringAndInt{}
+        for _, value := range intsDescending </span><span class="cov8" title="1">{
+                stringToIntDescending = append(stringToIntDescending, stringAndInt{name: intToString[value], number: value})
+        }</span>
+
+        <span class="cov8" title="1">return stringToIntDescending</span>
+}
+</pre>
+		
+		<pre class="file" id="file14" style="display: none">package repo
+
+import (
+        "context"
+        "fmt"
+        "io"
+        "os"
+        "sort"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/emisgroup/auditor/pkg/github/helpers"
+        gogithub "github.com/google/go-github/v28/github"
+        "github.com/spf13/cobra"
+        "github.com/spf13/viper"
+)
+
+// ListOptions provides the flags for the `list` command
+type ListOptions struct {
+        IgnoreForks    bool
+        IgnoreArchived bool
+        IgnoreReadOnly bool
+        IncludeTopic   string
+        IgnoreTopic    string
+        refs           []string
+}
+
+const resultsPerPage = 100
+
+// NewGitHubRepoListCommand will add a `github repo list` command which is responsible
+// for showing a list of repos given an org name
+func NewGitHubRepoListCommand(ctx context.Context, gh client.GitHubClient) *cobra.Command <span class="cov8" title="1">{
+        var opts ListOptions
+
+        cmd := &amp;cobra.Command{
+                Use:   "list",
+                Short: "List all the repos",
+                RunE: func(cmd *cobra.Command, args []string) error </span><span class="cov0" title="0">{
+                        opts.refs = args
+                        return ListRepos(ctx, gh, opts, os.Stdout)
+                }</span>,
+        }
+
+        <span class="cov8" title="1">cmd = GetListCommandFlags(cmd, &amp;opts, "")
+        return cmd</span>
+}
+
+// GetListCommandFlags for list repo
+func GetListCommandFlags(cmd *cobra.Command, opts *ListOptions, additionalUsageInfo string) *cobra.Command <span class="cov8" title="1">{
+        flags := cmd.Flags()
+        flags.BoolVar(&amp;opts.IgnoreForks, "ignore-forks", false, "Do not display forks"+additionalUsageInfo)
+        flags.BoolVar(&amp;opts.IgnoreArchived, "ignore-archived", false, "Do not display archived repos"+additionalUsageInfo)
+        flags.BoolVar(&amp;opts.IgnoreReadOnly, "ignore-readonly", false, "Do not display readonly repos"+additionalUsageInfo)
+        flags.StringVar(&amp;opts.IncludeTopic, "include-topic", "", "Include repositories with the topic given"+additionalUsageInfo)
+        flags.StringVar(&amp;opts.IgnoreTopic, "ignore-topic", "", "Exclude repositories with the topic given"+additionalUsageInfo)
+        return cmd
+}</span>
+
+// ListRepos will output a list of repos
+func ListRepos(ctx context.Context, gh client.GitHubClient, opts ListOptions, w io.Writer) error <span class="cov8" title="1">{
+        repoNames, err := GetRepos(ctx, gh, opts, w)
+
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">for _, repoName := range repoNames </span><span class="cov8" title="1">{
+                fmt.Fprintf(w, "%s\n", repoName)
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetRepos will return a list of repo names
+func GetRepos(ctx context.Context, gh client.GitHubClient, opts ListOptions, w io.Writer) ([]string, error) <span class="cov8" title="1">{
+        var repos []*gogithub.Repository
+        var repoNames []string
+
+        githubOrg := viper.GetString("GITHUB_ORG")
+
+        moreResults := true
+        for pageNo := 1; moreResults; pageNo++ </span><span class="cov8" title="1">{
+                opt := &amp;gogithub.RepositoryListByOrgOptions{
+                        ListOptions: gogithub.ListOptions{
+                                Page:    pageNo,
+                                PerPage: resultsPerPage,
+                        },
+                }
+                reposPage, response, err := gh.Repositories.ListByOrg(ctx, githubOrg, opt)
+                if err != nil </span><span class="cov8" title="1">{
+                        return nil, err
+                }</span>
+
+                <span class="cov8" title="1">repos = append(repos, reposPage...)
+                moreResults = pageNo &lt; response.LastPage</span>
+        }
+
+        <span class="cov8" title="1">sort.Slice(repos, func(i, j int) bool </span><span class="cov8" title="1">{ return repos[i].GetName() &lt; repos[j].GetName() }</span>)
+
+        <span class="cov8" title="1">for _, repo := range repos </span><span class="cov8" title="1">{
+                if len(opts.IncludeTopic) &gt; 0 &amp;&amp; !helpers.RepoHasTopic(repo, opts.IncludeTopic) </span><span class="cov8" title="1">{
+                        continue</span>
+                }
+
+                <span class="cov8" title="1">if len(opts.IgnoreTopic) &gt; 0 &amp;&amp; helpers.RepoHasTopic(repo, opts.IgnoreTopic) </span><span class="cov8" title="1">{
+                        continue</span>
+                }
+
+                <span class="cov8" title="1">if opts.IgnoreForks &amp;&amp; repo.GetFork() </span><span class="cov8" title="1">{
+                        continue</span>
+                }
+
+                <span class="cov8" title="1">if opts.IgnoreArchived &amp;&amp; repo.GetArchived() </span><span class="cov8" title="1">{
+                        continue</span>
+                }
+
+                <span class="cov8" title="1">if opts.IgnoreReadOnly &amp;&amp; !repo.GetPermissions()["push"] </span><span class="cov8" title="1">{
+                        continue</span>
+                }
+
+                <span class="cov8" title="1">repoNames = append(repoNames, repo.GetName())</span>
+        }
+
+        <span class="cov8" title="1">return repoNames, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file15" style="display: none">package repo
+
+import (
+        "context"
+        "encoding/csv"
+        "fmt"
+        "io"
+        "os"
+        "sort"
+        "strconv"
+        "strings"
+        "time"
+
+        "github.com/aws/aws-sdk-go/aws"
+        "github.com/aws/aws-sdk-go/aws/credentials/stscreds"
+        "github.com/aws/aws-sdk-go/aws/session"
+        "github.com/aws/aws-sdk-go/service/cloudwatch"
+        "github.com/emisgroup/auditor/pkg/cache"
+        "github.com/emisgroup/auditor/pkg/config"
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/emisgroup/auditor/pkg/github/helpers"
+        "github.com/emisgroup/auditor/pkg/github/progress"
+        "github.com/google/go-github/v28/github"
+        "github.com/spf13/cobra"
+        "github.com/spf13/viper"
+)
+
+// ProgressOptions provides the flags for the `progress` command
+type ProgressOptions struct {
+        WeeklyDate    string
+        Writer        string
+        IncludeTopics string
+        refs          []string
+}
+
+type codeMetric struct {
+        name  string
+        value int
+        date  string
+}
+
+type writeStrategy interface {
+        Write(repoName string, topic string, metrics []codeMetric) error
+}
+
+type progressWriter struct {
+        Strategy writeStrategy
+}
+
+// Write will write the data out given a specific strategy
+func (pw *progressWriter) Write(repoName string, topic string, metrics []codeMetric) error <span class="cov8" title="1">{
+        return pw.Strategy.Write(repoName, topic, metrics)
+}</span>
+
+type stdWriter struct {
+        w io.Writer
+}
+
+// Write will send data to csv
+func (s stdWriter) Write(repoName string, topic string, metrics []codeMetric) error <span class="cov8" title="1">{
+        fmt.Fprintln(s.w, repoName)
+        fmt.Fprintln(s.w, strings.Repeat("=", len(repoName)))
+        fmt.Fprintln(s.w)
+
+        if len(topic) &gt; 0 </span><span class="cov8" title="1">{
+                fmt.Fprintf(s.w, "topic-filtered: %s\n", topic)
+        }</span>
+
+        <span class="cov8" title="1">var date string
+        for _, metric := range metrics </span><span class="cov8" title="1">{
+                fmt.Fprintf(s.w, "%s: %d\n", metric.name, metric.value)
+                date = metric.date
+        }</span>
+
+        <span class="cov8" title="1">fmt.Fprintf(s.w, "week-commencing: %v\n\n", date)
+
+        return nil</span>
+}
+
+type csvWriter struct {
+        w io.Writer
+}
+
+var csvHeaderWritten = false
+
+// Write will send data to stdout
+func (s csvWriter) Write(repoName string, topic string, metrics []codeMetric) error <span class="cov8" title="1">{
+        header := []string{"repository", "week-commencing"}
+        record := []string{repoName, metrics[0].date}
+
+        if len(topic) &gt; 0 </span><span class="cov8" title="1">{
+                header = append(header, "topic-filtered")
+                record = append(record, topic)
+        }</span>
+
+        <span class="cov8" title="1">for _, metric := range metrics </span><span class="cov8" title="1">{
+                header = append(header, metric.name)
+                record = append(record, strconv.Itoa(metric.value))
+        }</span>
+
+        <span class="cov8" title="1">w := csv.NewWriter(s.w)
+        if !csvHeaderWritten </span><span class="cov8" title="1">{
+                if err := w.Write(header); err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+                <span class="cov8" title="1">csvHeaderWritten = true</span>
+        }
+
+        <span class="cov8" title="1">if err := w.Write(record); err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        // Write any buffered data to the underlying writer (standard output).
+        <span class="cov8" title="1">w.Flush()
+        err := w.Error()
+
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+type awsWriter struct{}
+
+// Write will send data to CloudWatch
+func (awsWriter) Write(repoName string, topic string, metrics []codeMetric) error <span class="cov0" title="0">{
+        sess := session.Must(session.NewSessionWithOptions(session.Options{
+                SharedConfigState:       session.SharedConfigEnable,
+                Profile:                 viper.GetString("AWS_PROFILE"),
+                AssumeRoleTokenProvider: stscreds.StdinTokenProvider,
+        }))
+
+        svc := cloudwatch.New(sess)
+
+        for _, metric := range metrics </span><span class="cov0" title="0">{
+                _, err := svc.PutMetricData(&amp;cloudwatch.PutMetricDataInput{
+                        Namespace: aws.String("Auditor/Progress"),
+                        MetricData: []*cloudwatch.MetricDatum{
+                                &amp;cloudwatch.MetricDatum{
+                                        MetricName: aws.String(metric.name),
+                                        Unit:       aws.String("Count"),
+                                        Value:      aws.Float64(float64(metric.value)),
+                                        Dimensions: []*cloudwatch.Dimension{
+                                                &amp;cloudwatch.Dimension{
+                                                        Name:  aws.String("Repo"),
+                                                        Value: aws.String(repoName),
+                                                },
+                                        },
+                                },
+                        },
+                })
+
+                if err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+        }
+
+        <span class="cov0" title="0">return nil</span>
+}
+
+// NewGitHubRepoProgressCommand will add a `github repo progress` command which is responsible
+// for retrieving some metrics to indicate how much work has been undertaken within a repo
+func NewGitHubRepoProgressCommand(ctx context.Context, gh client.GitHubClient) *cobra.Command <span class="cov8" title="1">{
+        var opts ProgressOptions
+        var repoName string
+
+        cmd := &amp;cobra.Command{
+                Use:   "progress",
+                Short: "Get progress metrics for a repo",
+                Args:  cobra.MaximumNArgs(1),
+                RunE: func(cmd *cobra.Command, args []string) error </span><span class="cov0" title="0">{
+                        opts.refs = args
+                        if len(args) &gt; 0 </span><span class="cov0" title="0">{
+                                repoName = GetName(args[0])
+                        }</span>
+                        <span class="cov0" title="0">apiCache := cache.New(repoName)
+                        return Progress(ctx, gh, apiCache, repoName, opts, os.Stdout, os.Stderr)</span>
+                },
+        }
+
+        <span class="cov8" title="1">flags := cmd.Flags()
+        flags.StringVar(&amp;opts.WeeklyDate, "weekly-date", time.Now().Format("2006-01-02"), "Return progress metrics for the week containing this date")
+        flags.StringVar(&amp;opts.Writer, "writer", "", "Where we should write the data to. empty is the stdout, other options: aws, csv")
+        flags.StringVar(&amp;opts.IncludeTopics, "include-topics", "", "Include repositories with the list of topics given (comma seperated no space)")
+
+        return cmd</span>
+}
+
+// Progress will detirmine the repo/s to obtain metrics for defined by given filters
+func Progress(ctx context.Context, gh client.GitHubClient, apiCache cache.Cache, repoName string, opts ProgressOptions, w io.Writer, e io.Writer) error <span class="cov8" title="1">{
+        csvHeaderWritten = false
+        var repoNames []string
+        var err error
+
+        topics := strings.Split(opts.IncludeTopics, ",")
+
+        for _, topic := range topics </span><span class="cov8" title="1">{
+                if repoName == "" </span><span class="cov8" title="1">{
+                        var listOpts ListOptions
+                        listOpts.IncludeTopic = topic
+                        repoNames, err = GetRepos(ctx, gh, listOpts, w)
+
+                        if err != nil </span><span class="cov0" title="0">{
+                                return err
+                        }</span>
+                } else<span class="cov8" title="1"> {
+                        repoNames = append(repoNames, repoName)
+                }</span>
+
+                <span class="cov8" title="1">for _, repoName := range repoNames </span><span class="cov8" title="1">{
+                        err := ProgressRepo(ctx, gh, apiCache, repoName, opts, topic, w)
+                        if err != nil </span><span class="cov8" title="1">{
+                                fmt.Fprintf(e, "Repo '%s' - %s\n", repoName, err)
+                        }</span>
+                }
+        }
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// ProgressRepo will output metrics to indicate work undertaken on the repo given
+func ProgressRepo(ctx context.Context, gh client.GitHubClient, apiCache cache.Cache, repoName string, opts ProgressOptions, topic string, w io.Writer) error <span class="cov8" title="1">{
+        var metrics []codeMetric
+
+        apiCache.SetRepoName(repoName)
+
+        weeklyCommitActivity, err := getWeeklyCommitActivity(ctx, gh, apiCache, repoName, opts)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">metrics = append(metrics, codeMetric{name: "commits", value: weeklyCommitActivity.GetTotal(), date: weeklyCommitActivity.GetWeek().Format("2006-01-02")})
+
+        weeklyCodeFrequency, err := getWeeklyCodeFrequency(ctx, gh, apiCache, repoName, opts)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">weeklyContributorsCount, err := getWeeklyContributorStats(ctx, gh, apiCache, repoName, opts)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">metrics = append(metrics, codeMetric{name: "code-additions", value: weeklyCodeFrequency.GetAdditions(), date: weeklyCodeFrequency.GetWeek().Format("2006-01-02")})
+        metrics = append(metrics, codeMetric{name: "code-deletions", value: weeklyCodeFrequency.GetDeletions(), date: weeklyCodeFrequency.GetWeek().Format("2006-01-02")})
+        metrics = append(metrics, codeMetric{name: "contributors", value: weeklyContributorsCount, date: weeklyCodeFrequency.GetWeek().Format("2006-01-02")})
+        var writer progressWriter
+        if opts.Writer == "aws" </span><span class="cov0" title="0">{
+                writer = progressWriter{Strategy: awsWriter{}}
+        }</span> else<span class="cov8" title="1"> if opts.Writer == "csv" </span><span class="cov8" title="1">{
+                strategy := csvWriter{w: w}
+                writer = progressWriter{Strategy: strategy}
+        }</span> else<span class="cov8" title="1"> {
+                strategy := stdWriter{w: w}
+                writer = progressWriter{Strategy: strategy}
+        }</span>
+
+        <span class="cov8" title="1">err = writer.Write(repoName, topic, metrics)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+func getWeeklyCommitActivity(ctx context.Context, gh client.GitHubClient, apiCache cache.Cache, repoName string, opts ProgressOptions) (*github.WeeklyCommitActivity, error) <span class="cov8" title="1">{
+        // Get the commit activities for the repo given
+        weeklyCommitActivities, err := getCommitActivities(ctx, gh, apiCache, repoName)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">weeklyCommitActivity, err := findCommitActivityForWeek(weeklyCommitActivities, opts.WeeklyDate)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return weeklyCommitActivity, nil</span>
+}
+
+// Get the weekly commit activities for the repo given
+func getCommitActivities(ctx context.Context, gh client.GitHubClient, apiCache cache.Cache, repoName string) ([]*github.WeeklyCommitActivity, error) <span class="cov8" title="1">{
+        var weeklyCommitActivities []*github.WeeklyCommitActivity
+        var err error
+        var resp *github.Response
+
+        weeklyCommitActivities, err = apiCache.LoadWeeklyCommitActivities()
+        if err == nil </span><span class="cov8" title="1">{
+                return weeklyCommitActivities, nil
+        }</span> else<span class="cov8" title="1"> if !os.IsNotExist(err) </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">githubOrg := viper.GetString("GITHUB_ORG")
+
+        retries := 0
+        maxRetries, waitPeriod := getRetryConfig()
+        for retries &lt; maxRetries </span><span class="cov8" title="1">{
+                weeklyCommitActivities, resp, err = gh.Repositories.ListCommitActivity(ctx, githubOrg, repoName)
+                if resp.StatusCode == 202 </span><span class="cov8" title="1">{
+                        retries++
+                        time.Sleep(time.Duration(retries * waitPeriod))
+                        err = fmt.Errorf("Calculating stats for repo %s, try again later", repoName)
+                }</span> else<span class="cov8" title="1"> {
+                        break</span>
+                }
+        }
+        <span class="cov8" title="1">if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">err = apiCache.SaveWeeklyCommitActivities(weeklyCommitActivities)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return weeklyCommitActivities, nil</span>
+}
+
+// Find the commit activity for the week given
+func findCommitActivityForWeek(weeklyCommitActivities []*github.WeeklyCommitActivity, weeklyDate string) (*github.WeeklyCommitActivity, error) <span class="cov8" title="1">{
+        requiredDate, err := time.Parse("2006-01-02", weeklyDate)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">i := sort.Search(len(weeklyCommitActivities), func(i int) bool </span><span class="cov8" title="1">{
+                return requiredDate.Before(weeklyCommitActivities[i].GetWeek().Time.AddDate(0, 0, 7))
+        }</span>)
+
+        <span class="cov8" title="1">if i &lt; len(weeklyCommitActivities) &amp;&amp; requiredDate.After(weeklyCommitActivities[i].GetWeek().Time.AddDate(0, 0, -1)) </span><span class="cov8" title="1">{
+                return weeklyCommitActivities[i], nil
+        }</span>
+
+        <span class="cov8" title="1">return nil, fmt.Errorf("Failed to find commit activity for %s", weeklyDate)</span>
+}
+
+func getWeeklyCodeFrequency(ctx context.Context, gh client.GitHubClient, apiCache cache.Cache, repoName string, opts ProgressOptions) (*github.WeeklyStats, error) <span class="cov8" title="1">{
+        codeFrequency, err := getCodeFrequency(ctx, gh, apiCache, repoName)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">weeklyCodeFrequency, err := findCodeFrequencyForWeek(codeFrequency, opts.WeeklyDate)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return weeklyCodeFrequency, nil</span>
+}
+
+func getCodeFrequency(ctx context.Context, gh client.GitHubClient, apiCache cache.Cache, repoName string) ([]*github.WeeklyStats, error) <span class="cov8" title="1">{
+        var weeklyStats []*github.WeeklyStats
+        var err error
+        var resp *github.Response
+
+        weeklyStats, err = apiCache.LoadCodeFrequency()
+        if err == nil </span><span class="cov8" title="1">{
+                return weeklyStats, nil
+        }</span> else<span class="cov8" title="1"> if !os.IsNotExist(err) </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">githubOrg := viper.GetString("GITHUB_ORG")
+
+        retries := 0
+        maxRetries, waitPeriod := getRetryConfig()
+        for retries &lt; maxRetries </span><span class="cov8" title="1">{
+                weeklyStats, resp, err = gh.Repositories.ListCodeFrequency(ctx, githubOrg, repoName)
+                if resp.StatusCode == 202 </span><span class="cov8" title="1">{
+                        retries++
+                        time.Sleep(time.Duration(retries * waitPeriod))
+                        err = fmt.Errorf("Calculating stats for repo %s, try again later", repoName)
+                }</span> else<span class="cov8" title="1"> {
+                        break</span>
+                }
+        }
+        <span class="cov8" title="1">if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">err = apiCache.SaveCodeFrequency(weeklyStats)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return weeklyStats, nil</span>
+}
+
+// Find the commit activity for the week given
+func findCodeFrequencyForWeek(codeFrequency []*github.WeeklyStats, weeklyDate string) (*github.WeeklyStats, error) <span class="cov8" title="1">{
+        requiredDate, err := time.Parse("2006-01-02", weeklyDate)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">i := sort.Search(len(codeFrequency), func(i int) bool </span><span class="cov8" title="1">{
+                return requiredDate.Before(codeFrequency[i].GetWeek().Time.AddDate(0, 0, 7))
+        }</span>)
+
+        <span class="cov8" title="1">if i &lt; len(codeFrequency) &amp;&amp; requiredDate.After(codeFrequency[i].GetWeek().Time.AddDate(0, 0, -1)) </span><span class="cov8" title="1">{
+                return codeFrequency[i], nil
+        }</span>
+
+        <span class="cov0" title="0">return nil, fmt.Errorf("Failed to find code frequency for %s", weeklyDate)</span>
+}
+
+func getWeeklyContributorStats(ctx context.Context, gh client.GitHubClient, apiCache cache.Cache, repoName string, opts ProgressOptions) (int, error) <span class="cov8" title="1">{
+        contributorList, err := getWeeklyContributors(ctx, gh, apiCache, repoName, opts.WeeklyDate)
+        if err != nil </span><span class="cov0" title="0">{
+                return 0, err
+        }</span>
+
+        <span class="cov8" title="1">weeklyContributors, err := findContributorCountForWeek(contributorList, opts.WeeklyDate)
+        if err != nil </span><span class="cov0" title="0">{
+                return 0, err
+        }</span>
+
+        <span class="cov8" title="1">return weeklyContributors, nil</span>
+}
+
+func getWeeklyContributors(ctx context.Context, gh client.GitHubClient, apiCache cache.Cache, repoName string, weeklyDate string) (map[string]int, error) <span class="cov8" title="1">{
+        weeklyContributors := make(map[string]int)
+        var contributorStats []*github.ContributorStats
+        var err error
+        var resp *github.Response
+
+        weeklyContributors, err = apiCache.LoadContributorStats()
+        if err == nil </span><span class="cov8" title="1">{
+                return weeklyContributors, nil
+        }</span> else<span class="cov8" title="1"> if !os.IsNotExist(err) </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">githubOrg := viper.GetString("GITHUB_ORG")
+
+        retries := 0
+        maxRetries, waitPeriod := getRetryConfig()
+        for retries &lt; maxRetries </span><span class="cov8" title="1">{
+                contributorStats, resp, err = gh.Repositories.ListContributorsStats(ctx, githubOrg, repoName)
+                if resp.StatusCode == 202 </span><span class="cov0" title="0">{
+                        retries++
+                        time.Sleep(time.Duration(retries * waitPeriod))
+                        err = fmt.Errorf("Calculating contributor stats for repo %s, try again later", repoName)
+                }</span> else<span class="cov8" title="1"> {
+                        break</span>
+                }
+        }
+        <span class="cov8" title="1">if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">weeklyContributors = progress.CalculateContributors(contributorStats)
+
+        err = apiCache.SaveContributorStats(weeklyContributors)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return weeklyContributors, err</span>
+}
+
+// Find the contributor count for the week given
+func findContributorCountForWeek(contributorList map[string]int, weeklyDate string) (int, error) <span class="cov8" title="1">{
+        requiredDate, err := time.Parse("2006-01-02", weeklyDate)
+        if err != nil </span><span class="cov0" title="0">{
+                return 0, err
+        }</span>
+
+        <span class="cov8" title="1">previousSunday := helpers.FindPreviousSunday(requiredDate)
+        return contributorList[previousSunday], nil</span>
+}
+
+// getRetryConfig returns the maximum number of API retry attempts and the retry wait period (nanoseconds), from the config file
+func getRetryConfig() (int, int) <span class="cov8" title="1">{
+        config.LoadConfig()
+
+        if config.Root.API.Retry.MaxAttempts == 0 </span><span class="cov8" title="1">{
+                // If no config values then default to no retry attempts
+                return 1, 0
+        }</span>
+
+        <span class="cov8" title="1">return config.Root.API.Retry.MaxAttempts, config.Root.API.Retry.WaitPeriod * 1000000</span>
+}
+</pre>
+		
+		<pre class="file" id="file16" style="display: none">package repo
+
+import (
+        "os"
+        "path/filepath"
+)
+
+// GetName will take a string, which may already be a repoName and check if the name is a "."
+// If it is a "." then it will use the current working directory
+func GetName(name string) string <span class="cov8" title="1">{
+        if name == "." </span><span class="cov8" title="1">{
+                dir, _ := os.Getwd()
+                name = filepath.Base(dir)
+        }</span>
+
+        <span class="cov8" title="1">return name</span>
+}
+</pre>
+		
+		<pre class="file" id="file17" style="display: none">package repo
+
+import (
+        "context"
+        "fmt"
+        "io"
+        "os"
+        "strings"
+        "sync"
+
+        "github.com/emisgroup/auditor/pkg/auditor-cli/ui"
+        "github.com/emisgroup/auditor/pkg/config"
+        "github.com/emisgroup/auditor/pkg/github"
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/emisgroup/auditor/pkg/github/helpers"
+        "github.com/spf13/cobra"
+        "github.com/spf13/viper"
+)
+
+// VetOptions provides the flags for the `list` command
+type VetOptions struct {
+        ListOptions
+        RepoName      string
+        SeverityLevel string
+}
+
+// NewGitHubVetCommand will add a `github repo vet` command which is responsible
+// for checking if it the repo meets our requirements
+func NewGitHubVetCommand(ctx context.Context, gh client.GitHubClient) *cobra.Command <span class="cov8" title="1">{
+        var opts VetOptions
+        cmd := &amp;cobra.Command{
+                Use:   "vet",
+                Short: "Check that a repo matches the guidelines",
+                Run: func(cmd *cobra.Command, args []string) </span><span class="cov0" title="0">{
+                        validator := github.AuditValidator{}
+                        if len(args) &gt; 0 </span><span class="cov0" title="0">{
+                                opts.RepoName = GetName(args[0])
+                        }</span>
+                        <span class="cov0" title="0">err := VetOption(ctx, gh, validator, opts, os.Stdout)
+                        if err != nil </span><span class="cov0" title="0">{
+                                fmt.Fprintf(os.Stderr, "Error: %v", err)
+                                os.Exit(1)
+                        }</span>
+                },
+        }
+        <span class="cov8" title="1">flags := cmd.Flags()
+        flags.StringVar(&amp;opts.SeverityLevel, "severity-level", "all", "What level of severity (log-level) do we want to display all,pass,error,warn,info &amp; fatal")
+        // Import Flags from repo list options
+        GetListCommandFlags(cmd, &amp;opts.ListOptions, ", Works along with [--severity-level] Flag only")
+
+        return cmd</span>
+}
+
+// VetOption will check the given flag option and execute appropriately
+func VetOption(ctx context.Context, gh client.GitHubClient, validator github.Validator, opts VetOptions, w io.Writer) error <span class="cov8" title="1">{
+        var wg sync.WaitGroup
+        var err error
+        vetStatus := true
+        CustomDisplaySeverity := map[string]bool{
+                config.LogLevelFatal: false,
+                config.LogLevelError: false,
+                config.LogLevelWarn:  false,
+                config.LogLevelInfo:  false,
+                config.LogLevelPass:  false,
+        }
+
+        if opts.SeverityLevel != "" </span><span class="cov8" title="1">{
+                option := strings.Split(opts.SeverityLevel, ",")
+                if len(option) &gt;= 1 </span><span class="cov8" title="1">{
+                        for _, value := range option </span><span class="cov8" title="1">{
+                                if _, ok := CustomDisplaySeverity[value]; !ok &amp;&amp; opts.SeverityLevel != "all" </span><span class="cov8" title="1">{
+                                        return fmt.Errorf("The specified log-level is not availabe: %s", value)
+                                }</span>
+                                <span class="cov8" title="1">if config.LogLevelFatal == value || opts.SeverityLevel == "all" </span><span class="cov8" title="1">{
+                                        CustomDisplaySeverity[config.LogLevelFatal] = true
+                                }</span>
+                                <span class="cov8" title="1">if config.LogLevelError == value || opts.SeverityLevel == "all" </span><span class="cov8" title="1">{
+                                        CustomDisplaySeverity[config.LogLevelError] = true
+                                }</span>
+                                <span class="cov8" title="1">if config.LogLevelWarn == value || opts.SeverityLevel == "all" </span><span class="cov8" title="1">{
+                                        CustomDisplaySeverity[config.LogLevelWarn] = true
+                                }</span>
+                                <span class="cov8" title="1">if config.LogLevelInfo == value || opts.SeverityLevel == "all" </span><span class="cov8" title="1">{
+                                        CustomDisplaySeverity[config.LogLevelInfo] = true
+                                }</span>
+                                <span class="cov8" title="1">if config.LogLevelPass == value || opts.SeverityLevel == "all" </span><span class="cov8" title="1">{
+                                        CustomDisplaySeverity[config.LogLevelPass] = true
+                                }</span>
+                        }
+                }
+        }
+
+        <span class="cov8" title="1">if opts.RepoName == "" </span><span class="cov8" title="1">{
+                repoNames, err := GetRepos(ctx, gh, opts.ListOptions, os.Stdout)
+                if err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+                <span class="cov8" title="1">for _, repoName := range repoNames </span><span class="cov8" title="1">{
+                        vetStatus, err = VetRepo(ctx, gh, validator, GetName(repoName), w, &amp;wg, CustomDisplaySeverity, vetStatus)
+                        if err != nil </span><span class="cov0" title="0">{
+                                return err
+                        }</span>
+                }
+        } else<span class="cov8" title="1"> {
+                vetStatus, err = VetRepo(ctx, gh, validator, GetName(opts.RepoName), w, &amp;wg, CustomDisplaySeverity, vetStatus)
+                if err != nil </span><span class="cov8" title="1">{
+                        return err
+                }</span>
+        }
+        <span class="cov8" title="1">if !vetStatus </span><span class="cov8" title="1">{
+                return fmt.Errorf("Vet failed")
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+// VetRepo will make sure the repo conforms to some kind of standards we have
+func VetRepo(ctx context.Context, gh client.GitHubClient, validator github.Validator, repoName string, w io.Writer, wg *sync.WaitGroup, customDisplaySeverity map[string]bool, vetStatus bool) (bool, error) <span class="cov8" title="1">{
+        githubOrg := viper.GetString("GITHUB_ORG")
+        repo, _, err := gh.Repositories.Get(ctx, githubOrg, repoName)
+        if err != nil </span><span class="cov8" title="1">{
+                fmt.Fprintf(os.Stderr, "Failed to get repo: %s", err)
+                return vetStatus, err
+        }</span>
+
+        <span class="cov8" title="1">rules, err := validator.GetRules(ctx, gh, githubOrg, repo, "")
+        if err != nil </span><span class="cov8" title="1">{
+                fmt.Fprintf(os.Stderr, "Failed to get the rules: %s", err)
+                return vetStatus, err
+        }</span>
+
+        <span class="cov8" title="1">report, err := validator.ValidateRules(rules)
+        if err != nil </span><span class="cov8" title="1">{
+                fmt.Fprintf(os.Stderr, "Failed to validate the rules: %s", err)
+                return vetStatus, err
+        }</span>
+        <span class="cov8" title="1">if customDisplaySeverity[report.RuleValidationLogLevel] </span><span class="cov8" title="1">{
+                fmt.Fprintf(w, "%s %s\n", ui.ConvertLogLevelToUI(report.RuleValidationLogLevel), repoName)
+                if len(report.Rules) != 0 </span><span class="cov8" title="1">{
+                        for _, ruleReport := range report.Rules </span><span class="cov8" title="1">{
+                                if customDisplaySeverity[ruleReport.Level] </span><span class="cov8" title="1">{
+                                        fmt.Fprintf(w, " - %s %s (%s)\n", ui.ConvertLogLevelToUI(ruleReport.Level), ruleReport.Note, ruleReport.Reason)
+                                }</span>
+                        }
+                }
+
+                <span class="cov8" title="1">if report.OverallStatus == config.StatusFail </span><span class="cov8" title="1">{
+                        codeOwnerHelperService := helpers.CodeOwnerHelper{Ctx: ctx, Gh: gh, GithubOrg: githubOrg}
+                        owners, err := codeOwnerHelperService.GetRepoCodeowners(repoName, "")
+                        if err == nil </span><span class="cov8" title="1">{
+                                fmt.Fprintf(w, " Owners\n")
+                                fmt.Fprintf(w, " - %s\n", strings.Join(owners, "\n - "))
+                        }</span>
+                        <span class="cov8" title="1">topContributors, err := helpers.GetRepoTopContributors(ctx, gh, githubOrg, repoName)
+                        if err == nil </span><span class="cov8" title="1">{
+                                fmt.Fprintf(w, " Top contributors\n")
+                                fmt.Fprintf(w, " - %s\n", strings.Join(topContributors, "\n - "))
+                        }</span>
+                        <span class="cov8" title="1">vetStatus = false</span>
+                }
+        }
+
+        <span class="cov8" title="1">return vetStatus, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file18" style="display: none">package team
+
+import (
+        "context"
+        "fmt"
+        "io"
+        "os"
+        "strings"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/google/go-github/v28/github"
+        "github.com/spf13/cobra"
+        "github.com/spf13/viper"
+)
+
+// NewGitHubInspectCommand will add a `github team inspect` command which is responsible
+// for inspecting a team
+func NewGitHubInspectCommand(ctx context.Context, gh client.GitHubClient) *cobra.Command <span class="cov8" title="1">{
+        cmd := &amp;cobra.Command{
+                Use:   "inspect",
+                Short: "Get more information about a team",
+                Args:  cobra.ExactArgs(1),
+                Run: func(cmd *cobra.Command, args []string) </span><span class="cov0" title="0">{
+                        err := InspectTeam(ctx, gh, args[0], os.Stdout)
+                        if err != nil </span><span class="cov0" title="0">{
+                                os.Exit(1)
+                        }</span>
+                },
+        }
+
+        <span class="cov8" title="1">return cmd</span>
+}
+
+// InspectTeam will display information about a team
+func InspectTeam(ctx context.Context, gh client.GitHubClient, teamName string, w io.Writer) error <span class="cov8" title="1">{
+        githubOrg := viper.GetString("GITHUB_ORG")
+        opt := &amp;github.ListOptions{PerPage: 1000}
+        teams, _, err := gh.Teams.ListTeams(ctx, githubOrg, opt)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">for _, team := range teams </span><span class="cov8" title="1">{
+                if teamName == team.GetName() </span><span class="cov8" title="1">{
+                        fmt.Fprintln(w, team.GetName())
+                        fmt.Fprintln(w, strings.Repeat("=", len(team.GetName())))
+                        fmt.Fprintf(w, "\n%s\n", team.GetDescription())
+
+                        moreResults := true
+                        var users []*github.User
+                        for pageNo := 1; moreResults; pageNo++ </span><span class="cov8" title="1">{
+                                opt := &amp;github.TeamListTeamMembersOptions{
+                                        ListOptions: github.ListOptions{
+                                                Page: pageNo,
+                                        },
+                                }
+                                usersPage, response, err := gh.Teams.ListTeamMembers(ctx, team.GetID(), opt)
+                                if err != nil </span><span class="cov0" title="0">{
+                                        return err
+                                }</span>
+
+                                <span class="cov8" title="1">users = append(users, usersPage...)
+                                moreResults = pageNo &lt; response.LastPage
+                                fmt.Printf("pageNo = %v   --- lastPage = %v\n", pageNo, response.LastPage)</span>
+                        }
+
+                        <span class="cov8" title="1">fmt.Fprintf(w, "\nUsers\n=====\n\n")
+
+                        for _, user := range users </span><span class="cov8" title="1">{
+                                fmt.Fprintf(w, "- %s\n", user.GetLogin())
+                        }</span>
+                }
+        }
+
+        <span class="cov8" title="1">return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file19" style="display: none">package team
+
+import (
+        "context"
+        "fmt"
+        "io"
+        "os"
+        "strconv"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/google/go-github/v28/github"
+        "github.com/spf13/cobra"
+        "github.com/spf13/viper"
+)
+
+// ListOptions provides the flags for the `list` command
+type ListOptions struct {
+        TreeView bool
+        refs     []string
+}
+
+// teamTree provides a struck to save the team details to process
+type teamTree struct {
+        teamID   string
+        teamName string
+        parentID string
+}
+
+// NewGitHubListCommand will add a `github team list` command which is responsible
+// for showing a list of teams given an org name
+func NewGitHubListCommand(ctx context.Context, gh client.GitHubClient) *cobra.Command <span class="cov8" title="1">{
+        var opts ListOptions
+
+        cmd := &amp;cobra.Command{
+                Use:   "list",
+                Short: "List all the teams",
+                RunE: func(cmd *cobra.Command, args []string) error </span><span class="cov0" title="0">{
+                        opts.refs = args
+                        return ListTeams(ctx, gh, opts, os.Stdout)
+                }</span>,
+        }
+        <span class="cov8" title="1">flags := cmd.Flags()
+        flags.BoolVar(&amp;opts.TreeView, "tree", false, "Display teams in GitHub in a tree structure")
+
+        return cmd</span>
+}
+
+// ListTeams will display a list of teams
+func ListTeams(ctx context.Context, gh client.GitHubClient, opts ListOptions, w io.Writer) error <span class="cov8" title="1">{
+        githubOrg := viper.GetString("GITHUB_ORG")
+        opt := &amp;github.ListOptions{PerPage: 1000}
+        teams, _, err := gh.Teams.ListTeams(ctx, githubOrg, opt)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">teamArray := []teamTree{}
+
+        for _, team := range teams </span><span class="cov8" title="1">{
+                if opts.TreeView </span><span class="cov8" title="1">{
+                        parentID := strconv.FormatInt(team.GetParent().GetID(), 10)
+                        teamID := strconv.FormatInt(team.GetID(), 10)
+                        teamName := team.GetName()
+                        // We mark the parents with "PARENT" as their parent id
+                        if parentID == "0" </span><span class="cov8" title="1">{
+                                parentID = "PARENT"
+                        }</span>
+                        <span class="cov8" title="1">teamArray = append(teamArray, teamTree{
+                                teamID:   teamID,
+                                teamName: teamName,
+                                parentID: parentID,
+                        })</span>
+                } else<span class="cov8" title="1"> {
+                        fmt.Fprintf(w, "%s\n", team.GetName())
+                }</span>
+        }
+
+        <span class="cov8" title="1">if opts.TreeView </span><span class="cov8" title="1">{
+                printTree(teamArray, "PARENT", 0, w)
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// printTree will display a list of teams in a tree structure
+func printTree(teamArray []teamTree, parent string, depth int, w io.Writer) <span class="cov8" title="1">{
+        for _, r := range teamArray </span><span class="cov8" title="1">{
+                if r.parentID == parent </span><span class="cov8" title="1">{
+                        for i := 0; i &lt; depth; i++ </span><span class="cov8" title="1">{
+                                fmt.Fprintf(w, " ")
+                        }</span>
+                        <span class="cov8" title="1">fmt.Fprintf(w, "- %s\n", r.teamName)
+                        printTree(teamArray, r.teamID, depth+1, w)</span>
+                }
+        }
+}
+</pre>
+		
+		<pre class="file" id="file20" style="display: none">package team
+
+import (
+        "context"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/spf13/cobra"
+)
+
+// NewGitHubTeamCommand will add a `github team` command which will add all the team sub commands
+func NewGitHubTeamCommand(ctx context.Context, gh client.GitHubClient) *cobra.Command <span class="cov8" title="1">{
+        cmd := &amp;cobra.Command{
+                Use:   "team",
+                Short: "Team related commands",
+        }
+
+        cmd.AddCommand(
+                NewGitHubListCommand(ctx, gh),
+                NewGitHubInspectCommand(ctx, gh),
+        )
+
+        return cmd
+}</span>
+</pre>
+		
+		<pre class="file" id="file21" style="display: none">package user
+
+import (
+        "context"
+        "fmt"
+        "io"
+        "os"
+        "sort"
+        "sync"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/google/go-github/v28/github"
+        "github.com/spf13/cobra"
+        "github.com/spf13/viper"
+)
+
+// ListCommandOptions provides the flags for the `list` command
+type ListCommandOptions struct {
+        ProfileNameBlank bool
+        refs             []string
+}
+
+// Details gives us a struct to store details
+type Details struct {
+        userName string
+}
+
+// NewGitHubUserListCommand will add a `github user list` command which is responsible
+// for showing a list of Users given an org name
+func NewGitHubUserListCommand(ctx context.Context, gh client.GitHubClient) *cobra.Command <span class="cov8" title="1">{
+        var opts ListCommandOptions
+
+        cmd := &amp;cobra.Command{
+                Use:   "list",
+                Short: "List all the Users",
+                RunE: func(cmd *cobra.Command, args []string) error </span><span class="cov0" title="0">{
+                        opts.refs = args
+                        return ListUsers(ctx, gh, opts, os.Stdout)
+                }</span>,
+        }
+        <span class="cov8" title="1">flags := cmd.Flags()
+        flags.BoolVar(&amp;opts.ProfileNameBlank, "profile-name-blank", false, "Display list of users in organization who have not added a name to their profile")
+
+        return cmd</span>
+}
+
+// ListUsers will display a list of users from the organization
+func ListUsers(ctx context.Context, gh client.GitHubClient, opts ListCommandOptions, w io.Writer) error <span class="cov8" title="1">{
+        var opt *github.ListMembersOptions
+        githubOrg := viper.GetString("GITHUB_ORG")
+
+        opt = &amp;github.ListMembersOptions{}
+        var orgUser []Details
+        var wg sync.WaitGroup
+        chanUserDetails := make(chan Details)
+
+        fmt.Fprintf(w, "\nUsers\n=====\n\n")
+        for </span><span class="cov8" title="1">{
+                users, response, err := gh.Organization.ListMembers(ctx, githubOrg, opt)
+                if err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+
+                <span class="cov8" title="1">for _, user := range users </span><span class="cov8" title="1">{
+                        if opts.ProfileNameBlank </span><span class="cov8" title="1">{
+                                wg.Add(1)
+                                go checkIsUserProfileNameBlank(ctx, gh, user.GetLogin(), &amp;wg, chanUserDetails)
+                        }</span> else<span class="cov8" title="1"> {
+                                fmt.Fprintf(w, "- %v\n", user.GetLogin())
+                        }</span>
+                }
+
+                <span class="cov8" title="1">if response.NextPage == 0 </span><span class="cov8" title="1">{
+                        break</span>
+                }
+
+                <span class="cov0" title="0">opt.ListOptions.Page = response.NextPage</span>
+        }
+
+        <span class="cov8" title="1">go func() </span><span class="cov8" title="1">{
+                wg.Wait()
+                close(chanUserDetails)
+        }</span>()
+
+        <span class="cov8" title="1">if opts.ProfileNameBlank </span><span class="cov8" title="1">{
+                for r := range chanUserDetails </span><span class="cov0" title="0">{
+                        orgUser = append(orgUser, r)
+                }</span>
+                <span class="cov8" title="1">sort.Slice(orgUser, func(i, j int) bool </span><span class="cov0" title="0">{ return orgUser[i].userName &lt; orgUser[j].userName }</span>)
+                <span class="cov8" title="1">for _, r := range orgUser </span><span class="cov0" title="0">{
+                        fmt.Fprintf(w, "- %s\n", r.userName)
+                }</span>
+        }
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// checkIsUserProfileNameBlank will fetch the given user details and check for Name not blank
+func checkIsUserProfileNameBlank(ctx context.Context, gh client.GitHubClient, username string, wg *sync.WaitGroup, chanUserDetails chan Details) error <span class="cov8" title="1">{
+        defer wg.Done()
+        userDetails, _, err := gh.Users.Get(ctx, username)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">if userDetails.GetName() == "" </span><span class="cov0" title="0">{
+                chanUserDetails &lt;- Details{
+                        userName: username,
+                }
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file22" style="display: none">package user
+
+import (
+        "context"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/spf13/cobra"
+)
+
+// NewGitHubUserCommand will add a `github user` command which will add all the user sub commands
+func NewGitHubUserCommand(ctx context.Context, gh client.GitHubClient) *cobra.Command <span class="cov8" title="1">{
+        cmd := &amp;cobra.Command{
+                Use:   "user",
+                Short: "User related commands",
+        }
+
+        cmd.AddCommand(
+                NewGitHubUserListCommand(ctx, gh),
+        )
+
+        return cmd
+}</span>
+</pre>
+		
+		<pre class="file" id="file23" style="display: none">package cmd
+
+import (
+        "fmt"
+        "os"
+
+        "github.com/emisgroup/auditor/pkg/auditor-cli/github"
+        "github.com/emisgroup/auditor/pkg/auditor-cli/version"
+        "github.com/emisgroup/auditor/pkg/config"
+
+        "github.com/spf13/cobra"
+)
+
+// Execute adds all child commands to the root command and sets flags appropriately.
+// This is called by main.main(). It only needs to happen once to the rootCmd.
+func Execute() <span class="cov0" title="0">{
+        config.InitConfig()
+
+        cmd := NewRootCommand()
+
+        if err := cmd.Execute(); err != nil </span><span class="cov0" title="0">{
+                fmt.Println(err)
+                os.Exit(1)
+        }</span>
+}
+
+// NewRootCommand is the cornerstone of the application. It's the main command for all commands to attach to
+func NewRootCommand() *cobra.Command <span class="cov8" title="1">{
+        var cmd = &amp;cobra.Command{
+                Use:     "auditor-cli",
+                Short:   "CLI application for auditing departmental standards",
+                Version: version.Get(),
+        }
+
+        // Here you will define your flags and configuration settings.
+        // Cobra supports persistent flags, which, if defined here,
+        // will be global for your application.
+        cmd.PersistentFlags().StringVar(&amp;config.CfgFile, "config", "", "config file (default is $HOME/.emis/auditor.yml)")
+
+        cmd.AddCommand(
+                NewVersionCommand(),
+                NewCompletionCommand(cmd),
+                github.NewGitHubCommand(),
+        )
+        return cmd
+}</span>
+</pre>
+		
+		<pre class="file" id="file24" style="display: none">package ui
+
+import (
+        "github.com/emisgroup/auditor/pkg/config"
+)
+
+const (
+        // Happy represents anything that needs a "happy" UI marker
+        Happy string = "✅"
+        // Sad represents anything that needs a "sad" UI marker
+        Sad string = "❌"
+        // LogLevelFatal represents rule fatals
+        LogLevelFatal string = "🚨"
+        // LogLevelError represents rule errors
+        LogLevelError string = "❌"
+        // LogLevelWarn represents rule warnings
+        LogLevelWarn string = "️️️⚠️"
+        // LogLevelInfo represents rule informational
+        LogLevelInfo string = "ℹ️"
+)
+
+// ConvertLogLevelToUI is a helper function to convert a log level to a UI friendly output.
+func ConvertLogLevelToUI(logLevel string) string <span class="cov8" title="1">{
+        switch logLevel </span>{
+        case config.LogLevelFatal:<span class="cov8" title="1">
+                return LogLevelFatal</span>
+        case config.LogLevelError:<span class="cov8" title="1">
+                return LogLevelError</span>
+        case config.LogLevelWarn:<span class="cov8" title="1">
+                return LogLevelWarn</span>
+        case config.LogLevelInfo:<span class="cov8" title="1">
+                return LogLevelInfo</span>
+        }
+
+        <span class="cov8" title="1">return Happy</span>
+}
+</pre>
+		
+		<pre class="file" id="file25" style="display: none">package cmd
+
+import (
+        "fmt"
+        "io"
+        "os"
+
+        "github.com/emisgroup/auditor/pkg/auditor-cli/version"
+        "github.com/spf13/cobra"
+)
+
+// NewVersionCommand adds a `version` command
+func NewVersionCommand() *cobra.Command <span class="cov8" title="1">{
+        cmd := &amp;cobra.Command{
+                Use:   "version",
+                Short: "Show the version information",
+
+                Run: func(cmd *cobra.Command, args []string) </span><span class="cov0" title="0">{
+                        DisplayVersion(os.Stdout)
+                }</span>,
+        }
+
+        <span class="cov8" title="1">return cmd</span>
+}
+
+// DisplayVersion will display the current version of the application
+func DisplayVersion(w io.Writer) <span class="cov8" title="1">{
+        v := version.Get()
+        fmt.Fprintf(w, "auditor version: %s\n", v)
+}</span>
+</pre>
+		
+		<pre class="file" id="file26" style="display: none">package version
+
+// NUMBER indicates the git commit for the build
+var NUMBER string
+
+// Get the version if set as NUMBER
+// otherwise returns 'dev build' as a placeholder
+func Get() string <span class="cov8" title="1">{
+        v := "dev build"
+        if NUMBER != "" </span><span class="cov8" title="1">{
+                v = NUMBER
+        }</span>
+        <span class="cov8" title="1">return v</span>
+}
+</pre>
+		
+		<pre class="file" id="file27" style="display: none">package cache
+
+import (
+        "encoding/json"
+        "io/ioutil"
+        "os"
+        "path/filepath"
+
+        "github.com/google/go-github/v28/github"
+        "github.com/mitchellh/go-homedir"
+)
+
+// Cache defines what methods we need from the cache
+type Cache interface {
+        SaveWeeklyCommitActivities(weeklyCommitActivities []*github.WeeklyCommitActivity) error
+        LoadWeeklyCommitActivities() ([]*github.WeeklyCommitActivity, error)
+        SaveCodeFrequency(weeklyStats []*github.WeeklyStats) error
+        LoadCodeFrequency() ([]*github.WeeklyStats, error)
+        SaveContributorStats(weeklyContributors map[string]int) error
+        LoadContributorStats() (map[string]int, error)
+        SetRepoName(string)
+        GetRepoName() string
+        Clear() error
+}
+
+// File represents the cache file for the responses from the API calls
+type File struct {
+        repoName string
+}
+
+// New will return a new cache file
+func New(repoName string) Cache <span class="cov8" title="1">{
+        cacheFile := File{
+                repoName: repoName,
+        }
+        return &amp;cacheFile
+}</span>
+
+// SetRepoName will set the repo name for the cache file
+func (cacheFile *File) SetRepoName(repoName string) <span class="cov8" title="1">{
+        cacheFile.repoName = repoName
+}</span>
+
+// GetRepoName will return the repo name for the cache file
+func (cacheFile *File) GetRepoName() string <span class="cov8" title="1">{
+        return cacheFile.repoName
+}</span>
+
+const commitActivityFilename = "commit_activity"
+const codeFrequencyFilename = "code_frequency"
+const contributorStatsFilename = "contributor_stats"
+
+// SaveWeeklyCommitActivities saves the weekly commit activities to the cache file
+func (cacheFile *File) SaveWeeklyCommitActivities(weeklyCommitActivities []*github.WeeklyCommitActivity) error <span class="cov8" title="1">{
+        err := cacheFile.saveToCache(commitActivityFilename, weeklyCommitActivities)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// LoadWeeklyCommitActivities loads the weekly commit activities from the cache file
+func (cacheFile *File) LoadWeeklyCommitActivities() ([]*github.WeeklyCommitActivity, error) <span class="cov8" title="1">{
+        byteValue, err := cacheFile.loadFromCache(commitActivityFilename)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">var weeklyCommitActivities []*github.WeeklyCommitActivity
+        err = json.Unmarshal(byteValue, &amp;weeklyCommitActivities)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return weeklyCommitActivities, nil</span>
+}
+
+// SaveCodeFrequency saves the code frequency to the cache file
+func (cacheFile *File) SaveCodeFrequency(weeklyStats []*github.WeeklyStats) error <span class="cov8" title="1">{
+        err := cacheFile.saveToCache(codeFrequencyFilename, weeklyStats)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// LoadCodeFrequency loads the weekly commit activities from the cache file
+func (cacheFile *File) LoadCodeFrequency() ([]*github.WeeklyStats, error) <span class="cov8" title="1">{
+        byteValue, err := cacheFile.loadFromCache(codeFrequencyFilename)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">var weeklyStats []*github.WeeklyStats
+        err = json.Unmarshal(byteValue, &amp;weeklyStats)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return weeklyStats, nil</span>
+}
+
+// SaveContributorStats saves the contributor stats to the cache file
+func (cacheFile *File) SaveContributorStats(output map[string]int) error <span class="cov0" title="0">{
+        err := cacheFile.saveToCache(contributorStatsFilename, output)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">return nil</span>
+}
+
+// LoadContributorStats loads the contributor stats from the cache file
+func (cacheFile *File) LoadContributorStats() (map[string]int, error) <span class="cov0" title="0">{
+        byteValue, err := cacheFile.loadFromCache(contributorStatsFilename)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov0" title="0">var LoadContributorStats map[string]int
+        err = json.Unmarshal(byteValue, &amp;LoadContributorStats)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov0" title="0">return LoadContributorStats, nil</span>
+}
+
+// Clear removes the cache files for the current repo
+func (cacheFile *File) Clear() error <span class="cov8" title="1">{
+        activityFilename, err := cacheFile.getCacheFilename(commitActivityFilename)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">err = clearCacheFile(activityFilename)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">codeFrequencyFilename, err := cacheFile.getCacheFilename(codeFrequencyFilename)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">err = clearCacheFile(codeFrequencyFilename)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">contributorStatsFilename, err := cacheFile.getCacheFilename(contributorStatsFilename)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">err = clearCacheFile(contributorStatsFilename)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+func clearCacheFile(cacheFilename string) error <span class="cov8" title="1">{
+        if fileExists(cacheFilename) </span><span class="cov8" title="1">{
+                err := os.Remove(cacheFilename)
+                if err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+        }
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// saveToCache saves the data to the cache file
+func (cacheFile *File) saveToCache(apiFilename string, data interface{}) error <span class="cov8" title="1">{
+        cacheFilename, err := cacheFile.getCacheFilename(apiFilename)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">file, err := os.Create(cacheFilename)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+        <span class="cov8" title="1">defer file.Close()
+
+        dataJSON, err := json.Marshal(data)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">_, err = file.WriteString(string(dataJSON))
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// loadFromCache loads the raw data from the cache file
+func (cacheFile *File) loadFromCache(apiFilename string) ([]byte, error) <span class="cov8" title="1">{
+        cacheFilename, err := cacheFile.getCacheFilename(apiFilename)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        // #nosec G304 - filename is not passed in from an external source
+        <span class="cov8" title="1">file, err := os.Open(cacheFilename)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+        <span class="cov8" title="1">defer file.Close()
+
+        byteValue, err := ioutil.ReadAll(file)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return byteValue, nil</span>
+}
+
+// getCacheFilename returns the filename of the cache file
+func (cacheFile *File) getCacheFilename(apiFilename string) (string, error) <span class="cov8" title="1">{
+        cacheDirectory, err := getCacheDirectory()
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">filename := filepath.Join(cacheDirectory, cacheFile.repoName+"_"+apiFilename+".json")
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">return filename, nil</span>
+}
+
+// getCacheDirectory returns the location of the cache directory
+func getCacheDirectory() (string, error) <span class="cov8" title="1">{
+        // Find home directory
+        home, err := homedir.Dir()
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">cacheDirectory := filepath.Join(home, ".emis", "auditor", "cache")
+        err = os.MkdirAll(cacheDirectory, os.ModePerm)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">return cacheDirectory, nil</span>
+}
+
+// fileExists checks if a file exists and is not a directory
+func fileExists(filename string) bool <span class="cov8" title="1">{
+        info, err := os.Stat(filename)
+        if os.IsNotExist(err) </span><span class="cov8" title="1">{
+                return false
+        }</span>
+        <span class="cov8" title="1">return !info.IsDir()</span>
+}
+</pre>
+		
+		<pre class="file" id="file28" style="display: none">package helpers
+
+import (
+        "context"
+        "fmt"
+        "regexp"
+        "strings"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/google/go-github/v28/github"
+)
+
+// CodeOwnerHelperService interface is used to perform common functions on code owners
+type CodeOwnerHelperService interface {
+        GetMemberCount(owners []string) (int, error)
+        GetRepoCodeowners(repoName string, headRef string) ([]string, error)
+}
+
+// CodeOwnerHelper is the helper used to perform common functions on code owners
+type CodeOwnerHelper struct {
+        Ctx       context.Context
+        Gh        client.GitHubClient
+        GithubOrg string
+}
+
+// ValidateUserInCodeOwner check the given input is a valid user name syntax in the codeowner file
+// Returns a boolean if email is valid
+func ValidateUserInCodeOwner(s string) bool <span class="cov8" title="1">{
+        if strings.HasPrefix(s, "@") &amp;&amp; !strings.Contains(s, "/") </span><span class="cov8" title="1">{
+                return true
+        }</span>
+        <span class="cov8" title="1">return false</span>
+}
+
+// ValidateTeamInCodeOwner check the given input is a valid team name syntax in the codeowner file
+// Returns a boolean if email is valid
+func ValidateTeamInCodeOwner(s string) bool <span class="cov8" title="1">{
+        if strings.HasPrefix(s, "@") &amp;&amp; strings.Contains(s, "/") </span><span class="cov8" title="1">{
+                return true
+        }</span>
+        <span class="cov8" title="1">return false</span>
+}
+
+// ValidCodeownerLocations is the valid locations of the CODEOWNERS file
+var ValidCodeownerLocations = []string{
+        "CODEOWNERS",
+        ".github/CODEOWNERS",
+        "docs/CODEOWNERS",
+}
+
+// GetCodeownersFile returns the codeowners file from the repo, if it exists
+func GetCodeownersFile(ctx context.Context, gh client.GitHubClient, githubOrg string, repoName string, headRef string) (*github.RepositoryContent, error) <span class="cov8" title="1">{
+        var err error
+        var fileContent *github.RepositoryContent
+
+        opt := &amp;github.RepositoryContentGetOptions{
+                Ref: headRef,
+        }
+
+        for _, validCodeOwnerLocation := range ValidCodeownerLocations </span><span class="cov8" title="1">{
+                fileContent, _, _, err = gh.Repositories.GetContents(ctx, githubOrg, repoName, validCodeOwnerLocation, opt)
+                if err == nil </span><span class="cov8" title="1">{
+                        return fileContent, nil
+                }</span>
+
+        }
+
+        <span class="cov8" title="1">return nil, err</span>
+}
+
+// ErrInvalidCodeOwner custom error struct for invalid code owner
+type ErrInvalidCodeOwner struct {
+        message string
+}
+
+// NewInvalidCodeOwner add error message for invalid code owner
+func NewInvalidCodeOwner(message string) *ErrInvalidCodeOwner <span class="cov8" title="1">{
+        return &amp;ErrInvalidCodeOwner{
+                message: message,
+        }
+}</span>
+
+func (e *ErrInvalidCodeOwner) Error() string <span class="cov8" title="1">{
+        return e.message
+}</span>
+
+// GetRepoCodeowners returns a list of the codeowners for the repo given
+func (api CodeOwnerHelper) GetRepoCodeowners(repoName string, headRef string) ([]string, error) <span class="cov8" title="1">{
+        fileContent, err := GetCodeownersFile(api.Ctx, api.Gh, api.GithubOrg, repoName, headRef)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">content, _ := fileContent.GetContent()
+        matches := regexp.MustCompile(`(?m)^([a-zA-Z.\*\/]+)[ \t]+([a-zA-Z-\d\.\/ @]+)`).FindAllStringSubmatch(content, -1)
+
+        var codeowners []string
+        codeownersLookup := make(map[string]bool)
+        for _, match := range matches </span><span class="cov8" title="1">{
+                owners := regexp.MustCompile(` `).Split(match[2], -1)
+                for _, owner := range owners </span><span class="cov8" title="1">{
+                        if _, ok := codeownersLookup[owner]; !ok </span><span class="cov8" title="1">{
+                                codeownersLookup[owner] = true
+                                codeowners = append(codeowners, owner)
+                        }</span>
+                }
+        }
+
+        <span class="cov8" title="1">if len(codeowners) == 0 </span><span class="cov8" title="1">{
+                msg := fmt.Sprintf("The %s content is invalid. Refer https://help.github.com/en/articles/about-code-owners", fileContent.GetHTMLURL())
+
+                return nil, NewInvalidCodeOwner(msg)
+        }</span>
+
+        <span class="cov8" title="1">return codeowners, nil</span>
+}
+
+// GetMemberCount returns the number of members from a given array of codeowner entries
+func (api CodeOwnerHelper) GetMemberCount(owners []string) (int, error) <span class="cov8" title="1">{
+        memberCount := 0
+
+        for _, owner := range owners </span><span class="cov8" title="1">{
+                switch </span>{
+                case ValidateUserInCodeOwner(owner):<span class="cov8" title="1">
+                        memberCount++</span>
+                case EmailValidation(owner):<span class="cov8" title="1">
+                        memberCount++</span>
+                case ValidateTeamInCodeOwner(owner):<span class="cov8" title="1">
+                        members, err := GetTeamMemberCount(api.Ctx, api.Gh, api.GithubOrg, owner)
+                        if err != nil </span><span class="cov8" title="1">{
+                                return 0, err
+                        }</span>
+                        <span class="cov8" title="1">memberCount = memberCount + members</span>
+                default:<span class="cov8" title="1">
+                        return 0, fmt.Errorf("Error determining codeowner entry '%s'", owner)</span>
+                }
+        }
+
+        <span class="cov8" title="1">return memberCount, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file29" style="display: none">package helpers
+
+import (
+        "context"
+        "net/http"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/google/go-github/v28/github"
+)
+
+// directoriesToScan defines the directories to check, whether a repo contain files other than the README.md and CODEOWNERS files
+var directoriesToScan = []struct {
+        directory string
+        files     []string
+}{
+        {
+                directory: "/",
+                files:     []string{"CODEOWNERS", "README.md", ".github", "docs"},
+        },
+        {
+                directory: ".github/",
+                files:     []string{"CODEOWNERS"},
+        },
+        {
+                directory: "docs/",
+                files:     []string{"CODEOWNERS"},
+        },
+}
+
+// IsARepositoryEmpty to check whether a repo is empty or not
+func IsARepositoryEmpty(ctx context.Context, gh client.GitHubClient, githubOrg string, repoName string, headRef string) (bool, error) <span class="cov8" title="1">{
+        opt := &amp;github.RepositoryContentGetOptions{
+                Ref: headRef,
+        }
+
+        for _, item := range directoriesToScan </span><span class="cov8" title="1">{
+                _, directoryContents, resp, err := gh.Repositories.GetContents(ctx, githubOrg, repoName, item.directory, opt)
+
+                if http.StatusNotFound == resp.StatusCode </span><span class="cov8" title="1">{
+                        continue</span>
+                }
+                <span class="cov8" title="1">if err != nil </span><span class="cov8" title="1">{
+                        return false, err
+                }</span>
+
+                <span class="cov8" title="1">for _, directoryContent := range directoryContents </span><span class="cov8" title="1">{
+                        if !SliceContains(item.files, directoryContent.GetName()) </span><span class="cov8" title="1">{
+                                return false, nil
+                        }</span>
+                }
+
+        }
+        <span class="cov8" title="1">return true, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file30" style="display: none">package helpers
+
+import (
+        "reflect"
+        "regexp"
+        "time"
+)
+
+// SliceContains find the given data in slice
+// Returns a boolean if data is available/not
+func SliceContains(sl interface{}, v interface{}) bool <span class="cov8" title="1">{
+        switch reflect.TypeOf(sl).Kind() </span>{
+        case reflect.Slice:<span class="cov8" title="1">
+                s := reflect.ValueOf(sl)
+
+                for i := 0; i &lt; s.Len(); i++ </span><span class="cov8" title="1">{
+                        if s.Index(i).Interface() == v </span><span class="cov8" title="1">{
+                                return true
+                        }</span>
+                }
+
+                <span class="cov8" title="1">return false</span>
+        default:<span class="cov0" title="0">
+                return false</span>
+        }
+}
+
+// EmailValidation check the given input is a valid email address
+// Returns a boolean if email is valid
+func EmailValidation(s string) bool <span class="cov8" title="1">{
+        re := regexp.MustCompile("^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
+
+        return re.MatchString(s)
+}</span>
+
+// FindPreviousSunday returns previous sunday for a given date
+// Returns date string
+func FindPreviousSunday(weeklyDate time.Time) string <span class="cov8" title="1">{
+        for weeklyDate.Weekday() != time.Sunday </span><span class="cov8" title="1">{
+                weeklyDate = weeklyDate.AddDate(0, 0, -1)
+        }</span>
+        <span class="cov8" title="1">return weeklyDate.Format("2006-01-02")</span>
+}
+
+// CompareDate defined to perform some date comparison
+// Returns boolean
+func CompareDate(date string, condition string) (bool, error) <span class="cov8" title="1">{
+        now, err := time.Parse("2006-01-02", time.Now().Format("2006-01-02"))
+        givenDate, err := time.Parse("2006-01-02", date)
+
+        if err != nil </span><span class="cov8" title="1">{
+                return false, err
+        }</span>
+
+        <span class="cov8" title="1">result := false
+
+        switch condition </span>{
+        case "eq":<span class="cov8" title="1">
+                result = givenDate.Unix() == now.Unix()</span>
+        case "lte":<span class="cov8" title="1">
+                result = givenDate.Unix() &lt;= now.Unix()</span>
+        case "gte":<span class="cov8" title="1">
+                result = givenDate.Unix() &gt;= now.Unix()</span>
+        }
+        <span class="cov8" title="1">return result, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file31" style="display: none">package helpers
+
+import (
+        "context"
+        "strings"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/google/go-github/v28/github"
+)
+
+// GetTeamMemberCount returns the number of members in a given team
+func GetTeamMemberCount(ctx context.Context, gh client.GitHubClient, githubOrg string, team string) (int, error) <span class="cov8" title="1">{
+        trimmedTeamName := strings.Join(strings.SplitN(team, "/", 2)[1:2], " ")
+        result, _, err := gh.Teams.GetTeamBySlug(ctx, githubOrg, trimmedTeamName)
+
+        if err != nil </span><span class="cov8" title="1">{
+                return 0, err
+        }</span>
+
+        <span class="cov8" title="1">moreResults := true
+        users := make([]*github.User, 0)
+
+        for pageNo := 1; moreResults; pageNo++ </span><span class="cov8" title="1">{
+                opt := &amp;github.TeamListTeamMembersOptions{
+                        ListOptions: github.ListOptions{
+                                Page: pageNo,
+                        },
+                }
+                usersPage, response, err := gh.Teams.ListTeamMembers(ctx, result.GetID(), opt)
+                if err != nil </span><span class="cov8" title="1">{
+                        return 0, err
+                }</span>
+
+                <span class="cov8" title="1">users = append(users, usersPage...)
+                moreResults = pageNo &lt; response.LastPage</span>
+        }
+
+        <span class="cov8" title="1">return len(users), nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file32" style="display: none">package helpers
+
+import (
+        "strings"
+
+        "github.com/google/go-github/v28/github"
+)
+
+// RepoHasTopic returns whether the repo specified has the topic given
+func RepoHasTopic(repo *github.Repository, topic string) bool <span class="cov8" title="1">{
+        topicExists := make(map[string]bool)
+        for _, topic := range repo.Topics </span><span class="cov8" title="1">{
+                topicExists[strings.ToLower(topic)] = true
+        }</span>
+
+        <span class="cov8" title="1">return topicExists[strings.ToLower(topic)]</span>
+}
+</pre>
+		
+		<pre class="file" id="file33" style="display: none">package helpers
+
+import (
+        "context"
+        "fmt"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+)
+
+// GetRepoTopContributors returns the top contributors for the repo
+func GetRepoTopContributors(ctx context.Context, gh client.GitHubClient, githubOrg string, repoName string) ([]string, error) <span class="cov8" title="1">{
+        contributors, _, err := gh.Repositories.ListContributors(ctx, githubOrg, repoName, nil)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">if len(contributors) == 0 </span><span class="cov8" title="1">{
+                return nil, fmt.Errorf("No contributors found in '%s' repository", repoName)
+        }</span>
+
+        <span class="cov8" title="1">var topContributors []string
+        topContributions := 0
+        for _, contributor := range contributors </span><span class="cov8" title="1">{
+                if contributor.GetContributions() &gt;= topContributions </span><span class="cov8" title="1">{
+                        topContributors = append(topContributors, contributor.GetLogin())
+                        topContributions = contributor.GetContributions()
+                }</span> else<span class="cov8" title="1"> {
+                        break</span>
+                }
+        }
+
+        <span class="cov8" title="1">return topContributors, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file34" style="display: none">package progress
+
+import "github.com/google/go-github/v28/github"
+
+// CalculateContributors - Calculate the weekly contributors
+func CalculateContributors(contributorStats []*github.ContributorStats) map[string]int <span class="cov8" title="1">{
+        weeklyContributors := make(map[string]int)
+        for _, metric := range contributorStats </span><span class="cov8" title="1">{
+                for _, week := range metric.Weeks </span><span class="cov8" title="1">{
+                        // Get date's only if it have a commit count
+                        if week.GetCommits() &gt; 0 </span><span class="cov8" title="1">{
+                                validCommitWeek := week.GetWeek().Format("2006-01-02")
+
+                                if _, ok := weeklyContributors[validCommitWeek]; ok </span><span class="cov8" title="1">{
+                                        // Increment the contribution count for same weekly date
+                                        weeklyContributors[validCommitWeek]++
+                                }</span> else<span class="cov8" title="1"> {
+                                        weeklyContributors[validCommitWeek] = 1
+                                }</span>
+
+                        }
+                }
+        }
+
+        <span class="cov8" title="1">return weeklyContributors</span>
+}
+</pre>
+		
+		<pre class="file" id="file35" style="display: none">package rules
+
+import (
+        "context"
+        "fmt"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/google/go-github/v28/github"
+        "github.com/spf13/viper"
+)
+
+// AutoPrivatiseRule is a rule
+type AutoPrivatiseRule struct {
+        Ctx       context.Context
+        Gh        client.GitHubClient
+        GithubOrg string
+        Repo      *github.Repository
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (AutoPrivatiseRule) GetType() string <span class="cov8" title="1">{
+        return "auto-privatise"
+}</span>
+
+// Validate will check to see if the repo is private
+func (rule AutoPrivatiseRule) Validate() error <span class="cov8" title="1">{
+        if !rule.Repo.GetPrivate() </span><span class="cov8" title="1">{
+                return fmt.Errorf(rule.GetDescription())
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// Fix will attempt to make the repo private
+func (rule AutoPrivatiseRule) Fix() error <span class="cov8" title="1">{
+        input := true
+        rule.Repo.Private = &amp;input
+
+        _, _, err := rule.Gh.Repositories.Edit(rule.Ctx, rule.GithubOrg, rule.RepoName, rule.Repo)
+        if err != nil </span><span class="cov8" title="1">{
+                return fmt.Errorf("Unable to make the repository private: %s", err.Error())
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (rule AutoPrivatiseRule) GetDescription() string <span class="cov8" title="1">{
+        return fmt.Sprintf(
+                "Repository must be private under the '%s' organisation",
+                viper.GetString("GITHUB_ORG"))
+}</span>
+</pre>
+		
+		<pre class="file" id="file36" style="display: none">package rules
+
+import (
+        "fmt"
+        "time"
+
+        "github.com/emisgroup/auditor/pkg/config"
+        "github.com/emisgroup/auditor/pkg/github/helpers"
+)
+
+// BaseRule holds all the common methods
+type BaseRule struct {
+        RepoName string
+        Config   config.Rule
+}
+
+// IsActive returns whether the rule is active
+func (rule BaseRule) IsActive() (bool, error) <span class="cov8" title="1">{
+        isRuleActive, err := helpers.CompareDate(rule.Config.DateToActivate, "lte")
+        if err != nil </span><span class="cov8" title="1">{
+                return false, err
+        }</span>
+
+        <span class="cov8" title="1">return isRuleActive &amp;&amp; !rule.IsRepoExcluded(), nil</span>
+}
+
+// IsRepoExcluded returns whether the repo is excluded from this rule
+func (rule BaseRule) IsRepoExcluded() bool <span class="cov8" title="1">{
+        return helpers.SliceContains(rule.Config.ExcludedRepos, rule.RepoName)
+}</span>
+
+// GetActiveDate returns the date the rule will become active
+func (rule BaseRule) GetActiveDate() (time.Time, error) <span class="cov8" title="1">{
+        activeDate, err := time.Parse("2006-01-02", rule.Config.DateToActivate)
+        if err != nil </span><span class="cov8" title="1">{
+                return time.Time{}, err
+        }</span>
+        <span class="cov8" title="1">return activeDate, nil</span>
+}
+
+// GetLogLevel will return you what reporting level we are going to set for a given rule
+func (rule BaseRule) GetLogLevel() string <span class="cov8" title="1">{
+        logLevel := rule.Config.LogLevel
+        if logLevel == "" </span><span class="cov8" title="1">{
+                return config.LogLevelFatal
+        }</span>
+        <span class="cov8" title="1">return rule.Config.LogLevel</span>
+
+}
+
+// Fix will attempt to fix the repo if it has failed the validation
+func (rule BaseRule) Fix() error <span class="cov8" title="1">{
+        return fmt.Errorf("Unable to fix automatically")
+}</span>
+</pre>
+		
+		<pre class="file" id="file37" style="display: none">package rules
+
+import (
+        "context"
+        "errors"
+        "fmt"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/google/go-github/v28/github"
+)
+
+// BranchProtectionRule is a validation rule to check that the repo has default branch protection
+type BranchProtectionRule struct {
+        Ctx       context.Context
+        Gh        client.GitHubClient
+        GithubOrg string
+        Repo      *github.Repository
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (BranchProtectionRule) GetType() string <span class="cov8" title="1">{
+        return "branch-protection"
+}</span>
+
+// Validate will check that the repo has the default branch protected
+func (rule BranchProtectionRule) Validate() error <span class="cov8" title="1">{
+
+        defaultBranch := rule.Repo.GetDefaultBranch()
+        branches, _, err := rule.Gh.Repositories.ListBranches(rule.Ctx, rule.GithubOrg, rule.RepoName, nil)
+
+        if err != nil </span><span class="cov8" title="1">{
+                return fmt.Errorf("Error returning branch information: %s", err.Error())
+        }</span>
+
+        <span class="cov8" title="1">for _, b := range branches </span><span class="cov8" title="1">{
+                if (*b.Name == defaultBranch || *b.Name == "master") &amp;&amp; !*b.Protected </span><span class="cov8" title="1">{
+                        return generateCorrectError(defaultBranch)
+                }</span>
+        }
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (rule BranchProtectionRule) GetDescription() string <span class="cov8" title="1">{
+        return "Repository must have branch protection on master and any alternative default branch"
+}</span>
+
+func generateCorrectError(defaultBranch string) (err error) <span class="cov8" title="1">{
+        if defaultBranch != "master" </span><span class="cov8" title="1">{
+                return fmt.Errorf("Repository must have branch protection on 'master' and '%s' branch", defaultBranch)
+        }</span>
+
+        <span class="cov8" title="1">return errors.New("Repository must have branch protection on 'master' branch")</span>
+}
+</pre>
+		
+		<pre class="file" id="file38" style="display: none">package rules
+
+import (
+        "context"
+        "errors"
+        "fmt"
+        "strings"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/emisgroup/auditor/pkg/github/helpers"
+        "github.com/emisgroup/auditor/pkg/github/validation"
+)
+
+// CodeownersRule is a validation rule to check that the repo has a CODEOWNERS file
+type CodeownersRule struct {
+        Ctx       context.Context
+        Gh        client.GitHubClient
+        Ch        helpers.CodeOwnerHelper
+        GithubOrg string
+        HeadRef   string
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (CodeownersRule) GetType() string <span class="cov8" title="1">{
+        return "codeowners"
+}</span>
+
+// Validate will check that there is a CODEOWNERS file we can parse and work with
+func (rule CodeownersRule) Validate() error <span class="cov8" title="1">{
+        codeOwners, err := rule.Ch.GetRepoCodeowners(rule.RepoName, rule.HeadRef)
+
+        if err != nil </span><span class="cov8" title="1">{
+                switch err.(type) </span>{
+                default:<span class="cov8" title="1">
+                        return errors.New(rule.GetDescription())</span>
+                case *helpers.ErrInvalidCodeOwner:<span class="cov8" title="1">
+                        return err</span>
+                }
+        }
+
+        <span class="cov8" title="1">vcc := validation.ValidCodeOwnerChecker{
+                Ctx:        rule.Ctx,
+                Gh:         rule.Gh,
+                GithubOrg:  rule.GithubOrg,
+                CodeOwners: codeOwners,
+        }
+        validate := vcc.ValidateCodeownersContent(vcc.Ctx, vcc.Gh, vcc.GithubOrg, vcc.CodeOwners)
+
+        if len(validate.Msg) &gt; 0 </span><span class="cov8" title="1">{
+                return errors.New(strings.TrimSuffix(strings.Join(validate.Msg, " - "), "\n"))
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (CodeownersRule) GetDescription() string <span class="cov8" title="1">{
+        return fmt.Sprintf(
+                "Repository must contain a CODEOWNERS file in one of these locations: %s%s",
+                strings.Join(helpers.ValidCodeownerLocations, ", "), ". Refer https://help.github.com/en/articles/about-code-owners",
+        )
+}</span>
+</pre>
+		
+		<pre class="file" id="file39" style="display: none">package rules
+
+import (
+        "fmt"
+
+        "github.com/google/go-github/v28/github"
+)
+
+// DescriptionRule is a validation rule to check that the repo has a description
+type DescriptionRule struct {
+        Repo *github.Repository
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (DescriptionRule) GetType() string <span class="cov8" title="1">{
+        return "description"
+}</span>
+
+// Validate will check to see if there is a description defined
+func (rule DescriptionRule) Validate() error <span class="cov8" title="1">{
+        if rule.Repo.GetDescription() == "" </span><span class="cov8" title="1">{
+                return fmt.Errorf(rule.GetDescription())
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (rule DescriptionRule) GetDescription() string <span class="cov8" title="1">{
+        return "Repository must have a description to describe its purpose"
+}</span>
+</pre>
+		
+		<pre class="file" id="file40" style="display: none">package rules
+
+import (
+        "context"
+        "errors"
+        "fmt"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/emisgroup/auditor/pkg/github/helpers"
+)
+
+// EmptyRepoRule is a validation rule to check whether a repo is empty or not
+type EmptyRepoRule struct {
+        Ctx       context.Context
+        Gh        client.GitHubClient
+        GithubOrg string
+        HeadRef   string
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (EmptyRepoRule) GetType() string <span class="cov8" title="1">{
+        return "empty-repo"
+}</span>
+
+// Validate will check whether a repo contain files other than the README.md &amp; CODEOWNERS files
+func (rule EmptyRepoRule) Validate() error <span class="cov8" title="1">{
+        isRepoEmpty, err := helpers.IsARepositoryEmpty(rule.Ctx, rule.Gh, rule.GithubOrg, rule.RepoName, rule.HeadRef)
+
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">if isRepoEmpty == true </span><span class="cov8" title="1">{
+                return errors.New(rule.GetDescription())
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (EmptyRepoRule) GetDescription() string <span class="cov8" title="1">{
+        return fmt.Sprintf("Repository must contain files other than the README.md &amp; CODEOWNERS files")
+}</span>
+</pre>
+		
+		<pre class="file" id="file41" style="display: none">package rules
+
+import (
+        "context"
+        "errors"
+        "fmt"
+        "time"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/google/go-github/v28/github"
+)
+
+// InactiveMasterBranchRule is a validation rule to check that the master repo has been merged into in the last x days
+type InactiveMasterBranchRule struct {
+        Ctx       context.Context
+        Gh        client.GitHubClient
+        GithubOrg string
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (InactiveMasterBranchRule) GetType() string <span class="cov8" title="1">{
+        return "inactive-master"
+}</span>
+
+// Validate will check that the master repo has had something committed in the last x days
+func (rule InactiveMasterBranchRule) Validate() error <span class="cov8" title="1">{
+
+        clo := &amp;github.CommitsListOptions{
+                SHA:   "master",
+                Since: time.Now().AddDate(0, 0, 0-rule.Config.DaysSinceMasterCommit),
+        }
+
+        commits, _, err := rule.Gh.Repositories.ListCommits(rule.Ctx, rule.GithubOrg, rule.RepoName, clo)
+
+        if err != nil </span><span class="cov8" title="1">{
+                return errors.New("Error returning commit information")
+        }</span>
+
+        <span class="cov8" title="1">if len(commits) == 0 </span><span class="cov8" title="1">{
+                return errors.New(rule.GetDescription())
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (rule InactiveMasterBranchRule) GetDescription() string <span class="cov8" title="1">{
+        return fmt.Sprintf(
+                "Repository branches must commit into master every %d days",
+                rule.Config.DaysSinceMasterCommit)
+}</span>
+</pre>
+		
+		<pre class="file" id="file42" style="display: none">package rules
+
+import (
+        "fmt"
+        "strings"
+)
+
+// LowercaseNameRule is a validation rule to check that the repo name is lowercase
+type LowercaseNameRule struct {
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (LowercaseNameRule) GetType() string <span class="cov8" title="1">{
+        return "lowercase-name"
+}</span>
+
+// Validate will check that the repo name is lowercase
+func (rule LowercaseNameRule) Validate() error <span class="cov8" title="1">{
+        if strings.ToLower(rule.RepoName) != rule.RepoName </span><span class="cov8" title="1">{
+                return fmt.Errorf(rule.GetDescription())
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (LowercaseNameRule) GetDescription() string <span class="cov8" title="1">{
+        return "Repository name must be lowercase"
+}</span>
+</pre>
+		
+		<pre class="file" id="file43" style="display: none">package rules
+
+import (
+        "context"
+        "fmt"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/google/go-github/v28/github"
+)
+
+// ReadmeRule is a validation rule to check that the repo has a README file
+type ReadmeRule struct {
+        Ctx       context.Context
+        Gh        client.GitHubClient
+        GithubOrg string
+        HeadRef   string
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (ReadmeRule) GetType() string <span class="cov8" title="1">{
+        return "readme"
+}</span>
+
+// Validate will check that the repo has a README.md file
+func (rule ReadmeRule) Validate() error <span class="cov8" title="1">{
+        opt := &amp;github.RepositoryContentGetOptions{
+                Ref: rule.HeadRef,
+        }
+        _, _, err := rule.Gh.Repositories.GetReadme(rule.Ctx, rule.GithubOrg, rule.RepoName, opt)
+        if err != nil </span><span class="cov8" title="1">{
+                return fmt.Errorf(rule.GetDescription())
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (ReadmeRule) GetDescription() string <span class="cov8" title="1">{
+        return "Repository must contain a README.md file"
+}</span>
+</pre>
+		
+		<pre class="file" id="file44" style="display: none">package rules
+
+import (
+        "fmt"
+        "strings"
+
+        "github.com/google/go-github/v28/github"
+)
+
+// RestrictedKeywordsInRepoNameRule is a validation rule to check that the repo name contains some specified keywords
+type RestrictedKeywordsInRepoNameRule struct {
+        Repo *github.Repository
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (RestrictedKeywordsInRepoNameRule) GetType() string <span class="cov8" title="1">{
+        return "restricted-keywords-in-repo-name"
+}</span>
+
+// Validate will check that the repo contains some restricted keywords
+func (rule RestrictedKeywordsInRepoNameRule) Validate() error <span class="cov8" title="1">{
+        var matches = 0
+
+        for _, repoName := range rule.Config.Options </span><span class="cov8" title="1">{
+                hasName := strings.Contains(rule.RepoName, repoName)
+                if hasName </span><span class="cov8" title="1">{
+                        matches++
+                }</span>
+        }
+        <span class="cov8" title="1">if matches &gt;= 1 </span><span class="cov8" title="1">{
+                return fmt.Errorf(rule.GetDescription())
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (rule RestrictedKeywordsInRepoNameRule) GetDescription() string <span class="cov8" title="1">{
+        return fmt.Sprintf(
+                "Repository name should not contain any of these words: %s",
+                strings.Join(rule.Config.Options, ", "),
+        )
+}</span>
+</pre>
+		
+		<pre class="file" id="file45" style="display: none">package rules
+
+import (
+        "context"
+        "fmt"
+        "strings"
+        "time"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/shurcooL/githubv4"
+)
+
+// StaleBranchRule is a rule to ensure branches have commits every x days. Uses graphql.
+type StaleBranchRule struct {
+        Ctx       context.Context
+        Gh4       client.GitHubV4Client
+        GithubOrg string
+        *BaseRule
+}
+
+//RepoRefNode is the struct holding the ref head information for each branch
+type RepoRefNode struct {
+        Name   string
+        Target struct {
+                Commit struct {
+                        CommittedDate time.Time
+                } `graphql:"... on Commit"`
+        }
+}
+
+//CommittedDatesPerBranchQuery Gets top 100 heads in repository. Get CommittedDate for each head.
+type CommittedDatesPerBranchQuery struct {
+        Repository struct {
+                Refs struct {
+                        Nodes []RepoRefNode
+                } `graphql:"refs(first: 100, refPrefix: \"refs/heads/\")"`
+        } `graphql:"repository(owner: $owner, name: $name)"`
+}
+
+// GetType returns the type name of the rule
+func (StaleBranchRule) GetType() string <span class="cov8" title="1">{
+        return "stale-branch"
+}</span>
+
+// Validate will check that each branch in the repo has had something committed in the last x days
+func (rule StaleBranchRule) Validate() error <span class="cov8" title="1">{
+
+        vars := map[string]interface{}{
+                "owner": githubv4.String(rule.GithubOrg),
+                "name":  githubv4.String(rule.RepoName),
+        }
+
+        query := CommittedDatesPerBranchQuery{}
+        err := rule.Gh4.GraphQL.Query(context.Background(), &amp;query, vars)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">var staleBranches []string
+        now := time.Now()
+        nowDate := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, time.UTC)
+        staleThreshold := nowDate.AddDate(0, 0, 0-rule.Config.StaleThresholdDays)
+
+        for _, branch := range query.Repository.Refs.Nodes </span><span class="cov8" title="1">{
+                committed := branch.Target.Commit.CommittedDate
+
+                if committed.Before(staleThreshold) </span><span class="cov8" title="1">{
+                        staleBranches = append(staleBranches, branch.Name)
+                }</span>
+        }
+
+        <span class="cov8" title="1">if len(staleBranches) != 0 </span><span class="cov8" title="1">{
+                return fmt.Errorf("Repository has stale branches: %s", strings.Join(staleBranches, ", "))
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (rule StaleBranchRule) GetDescription() string <span class="cov8" title="1">{
+        return fmt.Sprintf(
+                "Repository branches should have files committed in the last %d days or be deleted",
+                rule.Config.StaleThresholdDays)
+}</span>
+</pre>
+		
+		<pre class="file" id="file46" style="display: none">package rules
+
+import (
+        "context"
+        "fmt"
+        "strings"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+)
+
+// TeamsRule is a validation rule to check that the repo belongs to the required teams
+type TeamsRule struct {
+        Ctx       context.Context
+        Gh        client.GitHubClient
+        GithubOrg string
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (TeamsRule) GetType() string <span class="cov8" title="1">{
+        return "teams"
+}</span>
+
+// Validate will check to see repo belongs to the required teams
+func (rule TeamsRule) Validate() error <span class="cov8" title="1">{
+        var teamsNotFound []string
+
+        teams, _, err := rule.Gh.Repositories.ListTeams(rule.Ctx, rule.GithubOrg, rule.RepoName, nil)
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">for _, requiredTeam := range rule.Config.Teams </span><span class="cov8" title="1">{
+                found := false
+                for _, team := range teams </span><span class="cov8" title="1">{
+                        if team.GetName() == requiredTeam </span><span class="cov8" title="1">{
+                                found = true
+                        }</span>
+                }
+                <span class="cov8" title="1">if !found </span><span class="cov8" title="1">{
+                        teamsNotFound = append(teamsNotFound, requiredTeam)
+                }</span>
+        }
+
+        <span class="cov8" title="1">if len(teamsNotFound) &gt; 0 </span><span class="cov8" title="1">{
+                return fmt.Errorf("Repository must belong to these teams: %s", strings.Join(teamsNotFound, ", "))
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (rule TeamsRule) GetDescription() string <span class="cov8" title="1">{
+        return fmt.Sprintf("Repository must belong to these teams: %s", strings.Join(rule.Config.Teams, ", "))
+}</span>
+</pre>
+		
+		<pre class="file" id="file47" style="display: none">package rules
+
+import (
+        "context"
+        "fmt"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/emisgroup/auditor/pkg/github/helpers"
+)
+
+var description string = "Repository must not contain more than %d branches"
+
+// TooManyBranchesRule is a validation rule to check that there aren't an abnormally high number of branches that exist for the repo
+type TooManyBranchesRule struct {
+        Ctx       context.Context
+        Gh        client.GitHubClient
+        GithubOrg string
+        Ch        helpers.CodeOwnerHelperService
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (TooManyBranchesRule) GetType() string <span class="cov8" title="1">{
+        return "too-many-branches"
+}</span>
+
+// Validate will check that the repo doesn't have an abnormally high number of branches
+func (rule TooManyBranchesRule) Validate() error <span class="cov8" title="1">{
+
+        branches, _, err := rule.Gh.Repositories.ListBranches(rule.Ctx, rule.GithubOrg, rule.RepoName, nil)
+
+        if err != nil </span><span class="cov8" title="1">{
+                return fmt.Errorf("Error returning branch information: %s", err.Error())
+        }</span>
+
+        //Get a count excluding protected branches, e.g master
+        <span class="cov8" title="1">unprotectedBranchCount := 0
+
+        for _, branch := range branches </span><span class="cov8" title="1">{
+                if *branch.Protected == false </span><span class="cov8" title="1">{
+                        unprotectedBranchCount++
+                }</span>
+        }
+
+        //Get CodeOwners
+        <span class="cov8" title="1">owners, err := rule.Ch.GetRepoCodeowners(rule.RepoName, "")
+
+        if err != nil </span><span class="cov8" title="1">{
+                return rule.checkAgainstDefault(unprotectedBranchCount)
+        }</span>
+
+        //Get team &amp; users count
+        <span class="cov8" title="1">members, err := rule.Ch.GetMemberCount(owners)
+
+        if err != nil </span><span class="cov8" title="1">{
+                return rule.checkAgainstDefault(unprotectedBranchCount)
+        }</span>
+
+        //Calculate the allowed branches and determine if we're below the threshold
+        <span class="cov8" title="1">var allowedBranches float32 = (float32(members) * 2.0)
+
+        if unprotectedBranchCount &gt; int(allowedBranches) </span><span class="cov8" title="1">{
+                return fmt.Errorf(description, int(allowedBranches))
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (rule TooManyBranchesRule) GetDescription() string <span class="cov8" title="1">{
+        return fmt.Sprintf(description, rule.Config.DefaultAllowedBranches)
+}</span>
+
+func (rule TooManyBranchesRule) checkAgainstDefault(branchCount int) error <span class="cov8" title="1">{
+        defaultAllowedBranches := rule.Config.DefaultAllowedBranches
+        if branchCount &gt; defaultAllowedBranches </span><span class="cov8" title="1">{
+                return fmt.Errorf(description, defaultAllowedBranches)
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file48" style="display: none">package rules
+
+import (
+        "context"
+        "fmt"
+        "strings"
+
+        "github.com/emisgroup/auditor/pkg/github/helpers"
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/google/go-github/v28/github"
+)
+
+// TopicRule is a validation rule to check that the repo has valid topic/s assigned
+type TopicRule struct {
+        Ctx       context.Context
+        Gh        client.GitHubClient
+        GithubOrg string
+        Repo      *github.Repository
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (TopicRule) GetType() string <span class="cov8" title="1">{
+        return "topic"
+}</span>
+
+// Validate will check to see repo has valid topic/s assigned
+func (rule TopicRule) Validate() error <span class="cov8" title="1">{
+        var err error
+        var matches = 0
+        // We need to retreive the topics for the repo here as the github.Repository passed in does not always contain the topics,
+        // i.e. when passed via a webhook payload
+        // See https://developer.github.com/v3/activity/events/types/#checkrunevent-api-payload
+        rule.Repo.Topics, _, err = rule.Gh.Repositories.ListAllTopics(rule.Ctx, rule.GithubOrg, rule.Repo.GetName())
+        if err != nil </span><span class="cov8" title="1">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">for _, topicItem := range rule.Config.Options </span><span class="cov8" title="1">{
+                hasName := helpers.RepoHasTopic(rule.Repo, topicItem)
+                if hasName </span><span class="cov8" title="1">{
+                        matches++
+                }</span>
+        }
+        <span class="cov8" title="1">if matches != 1 </span><span class="cov8" title="1">{
+                err = fmt.Errorf(
+                        "Repository must contain a '%s' topic, add a topic named one of [%v] found %d",
+                        rule.Config.Name,
+                        strings.Join(rule.Config.Options, ", "),
+                        matches)
+        }</span>
+
+        <span class="cov8" title="1">return err</span>
+}
+
+// GetDescription returns the description for the rule
+func (rule TopicRule) GetDescription() string <span class="cov8" title="1">{
+        return fmt.Sprintf(
+                "Repository must contain a '%s' topic by adding a topic named one of the following: %s",
+                rule.Config.Name,
+                strings.Join(rule.Config.Options, ", "),
+        )
+}</span>
+</pre>
+		
+		<pre class="file" id="file49" style="display: none">package rules
+
+import (
+        "fmt"
+        "strings"
+)
+
+// ValidNameRule is a validation rule to check that the repo name is valid
+type ValidNameRule struct {
+        *BaseRule
+}
+
+// GetType returns the type name of the rule
+func (ValidNameRule) GetType() string <span class="cov8" title="1">{
+        return "valid-name"
+}</span>
+
+// Validate will check that the repo name follows the guidelines
+func (rule ValidNameRule) Validate() error <span class="cov8" title="1">{
+        if strings.ContainsAny(rule.RepoName, "._") </span><span class="cov8" title="1">{
+                return fmt.Errorf(rule.GetDescription())
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+// GetDescription returns the description for the rule
+func (ValidNameRule) GetDescription() string <span class="cov8" title="1">{
+        return "Repository name must not contain the '.' or '_' characters, use the '-' instead"
+}</span>
+</pre>
+		
+		<pre class="file" id="file50" style="display: none">package validation
+
+import (
+        "context"
+        "fmt"
+        "net/http"
+        "strings"
+
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/emisgroup/auditor/pkg/github/helpers"
+)
+
+// ValidCodeOwnerChecker is a validation for CODEOWNERS file
+type ValidCodeOwnerChecker struct {
+        Ctx        context.Context
+        Gh         client.GitHubClient
+        GithubOrg  string
+        CodeOwners []string
+}
+
+// ValidateCodeOwnerError is a list of error message for CODEOWNER content
+type ValidateCodeOwnerError struct {
+        Msg []string
+}
+
+// ValidateCodeownersContent returns wether the code owner syntax is a valid one
+func (v *ValidCodeOwnerChecker) ValidateCodeownersContent(ctx context.Context, gh client.GitHubClient, githubOrg string, codeOwners []string) ValidateCodeOwnerError <span class="cov8" title="1">{
+        vcc := ValidateCodeOwnerError{}
+        for _, ownerName := range codeOwners </span><span class="cov8" title="1">{
+                switch </span>{
+                case helpers.ValidateUserInCodeOwner(ownerName):<span class="cov8" title="1">
+                        vcc = v.isUserInOrganisation(ownerName, vcc)</span>
+                case helpers.ValidateTeamInCodeOwner(ownerName):<span class="cov8" title="1">
+                        vcc = v.isTeamInOrganisation(ownerName, vcc)</span>
+                case helpers.EmailValidation(ownerName):<span class="cov8" title="1">
+                        vcc = contentIsEmail(ownerName, vcc)</span>
+                default:<span class="cov8" title="1">
+                        vcc = contentNotValid(ownerName, vcc)</span>
+                }
+        }
+
+        <span class="cov8" title="1">return vcc</span>
+}
+
+func (v *ValidCodeOwnerChecker) isUserInOrganisation(userName string, vcc ValidateCodeOwnerError) ValidateCodeOwnerError <span class="cov8" title="1">{
+        trimUserName := strings.TrimPrefix(userName, "@")
+        result, resp, apiError := v.Gh.Organization.IsMember(v.Ctx, v.GithubOrg, trimUserName)
+
+        if !result &amp;&amp; http.StatusNotFound == resp.StatusCode </span><span class="cov8" title="1">{
+                vcc.AddErrorMessage(fmt.Sprintf("The CODEOWNER content is invalid. The given user '%s' is not listed in '%s' organisation \n", trimUserName, v.GithubOrg))
+        }</span> else<span class="cov8" title="1"> if apiError != nil </span><span class="cov8" title="1">{
+                vcc.AddErrorMessage(fmt.Sprintf("Organization.IsMember api call returned error: %v \n", apiError))
+        }</span>
+
+        <span class="cov8" title="1">return vcc</span>
+}
+
+func (v *ValidCodeOwnerChecker) isTeamInOrganisation(teamName string, vcc ValidateCodeOwnerError) ValidateCodeOwnerError <span class="cov8" title="1">{
+        trimTeamName := strings.Join(strings.SplitN(teamName, "/", 2)[1:2], " ")
+        result, resp, apiError := v.Gh.Teams.GetTeamBySlug(v.Ctx, v.GithubOrg, trimTeamName)
+
+        if result.GetID() == 0 &amp;&amp; http.StatusNotFound == resp.StatusCode </span><span class="cov8" title="1">{
+                vcc.AddErrorMessage(fmt.Sprintf("The CODEOWNER content is invalid. The given team '%s' is not listed in '%s' organisation \n", trimTeamName, v.GithubOrg))
+        }</span> else<span class="cov8" title="1"> if apiError != nil </span><span class="cov8" title="1">{
+                vcc.AddErrorMessage(fmt.Sprintf("Teams.GetTeamBySlug api call returned error: %v \n", apiError))
+        }</span>
+
+        <span class="cov8" title="1">return vcc</span>
+}
+
+// AddErrorMessage appends the error to ValidateCodeOwnerError struct
+func (vco *ValidateCodeOwnerError) AddErrorMessage(msg string) []string <span class="cov8" title="1">{
+        vco.Msg = append(vco.Msg, msg)
+
+        return vco.Msg
+}</span>
+
+func contentIsEmail(ownerName string, vcc ValidateCodeOwnerError) ValidateCodeOwnerError <span class="cov8" title="1">{
+        return vcc
+}</span>
+
+func contentNotValid(ownerName string, vcc ValidateCodeOwnerError) ValidateCodeOwnerError <span class="cov8" title="1">{
+        vcc.AddErrorMessage(fmt.Sprintf("The CODEOWNER '%s' is not a valid content \n", ownerName))
+
+        return vcc
+}</span>
+</pre>
+		
+		<pre class="file" id="file51" style="display: none">package github
+
+import (
+        "context"
+        "fmt"
+        "time"
+
+        "github.com/emisgroup/auditor/pkg/github/helpers"
+
+        "github.com/emisgroup/auditor/pkg/config"
+        "github.com/emisgroup/auditor/pkg/github/client"
+        "github.com/emisgroup/auditor/pkg/github/rules"
+        "github.com/google/go-github/v28/github"
+)
+
+// ValidationRule defines the interface of a validation rule for a repo
+type ValidationRule interface {
+        GetType() string
+        IsActive() (bool, error)
+        IsRepoExcluded() bool
+        GetActiveDate() (time.Time, error)
+        Validate() error
+        Fix() error
+        GetDescription() string
+        GetLogLevel() string
+}
+
+// ValidationReport provides a struct to house the data gleaned from a validation run.
+type ValidationReport struct {
+        // Rules contains the validation reports for each rule
+        Rules []ValidationRuleReport
+        // Status returns an overall report status for the validation run.
+        // Will be either: "pass", "fail"
+        // This comes from config.Status*
+        OverallStatus string
+        // RuleValidationLogLevel defines the worst offending failure of the rules defined during a validation run.
+        // Will be either: "fatal", "error", "warn", "info", "pass".
+        // This comes from config.LogLevelInfo*
+        RuleValidationLogLevel string
+}
+
+// ValidationRuleReport contains a report for an individual validation rule
+type ValidationRuleReport struct {
+        // Note contains the description of the rule
+        Note string
+        // Level contains the level of the validation rule against this repo
+        // This comes from config.LogLevel*
+        Level string
+        // Reason defines the reason for the rule report
+        // This comes from github.RuleReportReason*
+        Reason string
+}
+
+const (
+        // RuleReportReasonRuleInactive represents a rule that is not yet active
+        RuleReportReasonRuleInactive string = "inactive"
+        // RuleReportReasonRepoExcluded represents that the repo has been excluded from this rule
+        RuleReportReasonRepoExcluded string = "excluded"
+        // RuleReportReasonConfig represents when a validation result for a rule is due to its configuration
+        RuleReportReasonConfig string = "config"
+)
+
+// Validator defines an interface to retrieve a set of validation rules
+type Validator interface {
+        // GetRules returns a list of the auditor validation rules
+        GetRules(ctx context.Context, gh client.GitHubClient, githubOrg string, repo *github.Repository, headRef string) ([]ValidationRule, error)
+
+        // ValidateRules will validate the repo given the current set of rules as defined in GetRules.
+        ValidateRules(rules []ValidationRule) (*ValidationReport, error)
+}
+
+// AuditValidator is a validator to retrieve the auditor validation rules
+type AuditValidator struct{ name string }
+
+// GetRules returns a list of the auditor validation rules
+func (validator AuditValidator) GetRules(ctx context.Context, gh client.GitHubClient, githubOrg string, repo *github.Repository, headRef string) ([]ValidationRule, error) <span class="cov8" title="1">{
+        var rules []ValidationRule
+        config.LoadConfig()
+        for _, ruleConfig := range config.Root.Vet.Rules </span><span class="cov8" title="1">{
+                rule, err := getValidationRuleFromConfig(ctx, ruleConfig, repo, gh, githubOrg, headRef)
+                if err != nil </span><span class="cov8" title="1">{
+                        return nil, err
+                }</span>
+                <span class="cov8" title="1">rules = append(rules, rule)</span>
+        }
+        <span class="cov8" title="1">return rules, nil</span>
+}
+
+// ValidateRules will validate the repo given the current set of rules as passed in.
+func (validator AuditValidator) ValidateRules(rules []ValidationRule) (*ValidationReport, error) <span class="cov8" title="1">{
+        ruleReports := []ValidationRuleReport{}
+        reportStatus := config.StatusPass
+        reportLogLevel := config.LogLevelPass
+        reportLogLevelIndex := len(config.LogLevelOrder)
+
+        for _, rule := range rules </span><span class="cov8" title="1">{
+                ruleReport := ValidationRuleReport{}
+
+                isRuleActive, err := rule.IsActive()
+                if err != nil </span><span class="cov0" title="0">{
+                        return nil, err
+                }</span>
+
+                <span class="cov8" title="1">err = rule.Validate()
+                if err != nil </span><span class="cov8" title="1">{
+                        ruleReport.Note = err.Error()
+
+                        // Based on the log level of the rule, if the rule fails validation then should it fail the repo?
+                        shouldRuleFailReport := helpers.SliceContains(config.Root.LogLevels.Fail, rule.GetLogLevel())
+
+                        if isRuleActive </span><span class="cov8" title="1">{
+                                if shouldRuleFailReport </span><span class="cov8" title="1">{
+                                        // If the rule's log level would fail the report then attempt to fix the rule failure
+                                        err = rule.Fix()
+                                        if err == nil </span><span class="cov0" title="0">{
+                                                ruleReport.Note = ruleReport.Note + " - fixed"
+                                        }</span> else<span class="cov8" title="1"> {
+                                                ruleReport.Note = ruleReport.Note + " - " + err.Error()
+                                                reportStatus = config.StatusFail
+                                        }</span>
+                                }
+
+                                // If the rule is active then return rule's the log level
+                                <span class="cov8" title="1">ruleReport.Level = rule.GetLogLevel()</span>
+                        } else<span class="cov8" title="1"> {
+                                if !shouldRuleFailReport </span><span class="cov8" title="1">{
+                                        // If the rule's log level would not fail the report then return the rule log level
+                                        ruleReport.Level = rule.GetLogLevel()
+                                }</span> else<span class="cov8" title="1"> {
+                                        // If the rule's log level would fail the report then return the highest pass log level
+                                        ruleReport.Level = config.Root.LogLevels.Pass[0]
+                                }</span>
+                        }
+                } else<span class="cov8" title="1"> {
+                        ruleReport.Note = rule.GetDescription()
+                        ruleReport.Level = config.LogLevelPass
+                }</span>
+
+                <span class="cov8" title="1">if rule.IsRepoExcluded() </span><span class="cov8" title="1">{
+                        ruleReport.Reason = RuleReportReasonRepoExcluded
+                }</span> else<span class="cov8" title="1"> if !isRuleActive </span><span class="cov8" title="1">{
+                        ruleReport.Reason = RuleReportReasonRuleInactive
+                }</span> else<span class="cov8" title="1"> {
+                        ruleReport.Reason = RuleReportReasonConfig
+                }</span>
+
+                // We need to know the "worst" ruler breaker of all the rules run.
+                // So we have defined the order in config.LogLevelOrder we then want to find
+                // out if the offender is worst than the last one!
+                <span class="cov8" title="1">for k, v := range config.LogLevelOrder </span><span class="cov8" title="1">{
+                        if v == ruleReport.Level &amp;&amp; k &lt;= reportLogLevelIndex </span><span class="cov8" title="1">{
+                                reportLogLevel = ruleReport.Level
+                                reportLogLevelIndex = k
+                                break</span>
+                        }
+                }
+
+                <span class="cov8" title="1">ruleReports = append(ruleReports, ruleReport)</span>
+        }
+
+        <span class="cov8" title="1">report := &amp;ValidationReport{
+                Rules:                  ruleReports,
+                OverallStatus:          reportStatus,
+                RuleValidationLogLevel: reportLogLevel,
+        }
+
+        return report, nil</span>
+}
+
+// getValidationRuleFromConfig returns the appropriate ValidationRule given the rule config
+func getValidationRuleFromConfig(ctx context.Context, ruleConfig config.Rule, repo *github.Repository, gh client.GitHubClient, githubOrg string, headRef string) (ValidationRule, error) <span class="cov8" title="1">{
+        switch ruleConfig.Type </span>{
+        case "lowercase-name":<span class="cov8" title="1">
+                return rules.LowercaseNameRule{BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "valid-name":<span class="cov8" title="1">
+                return rules.ValidNameRule{BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "restricted-keywords-in-repo-name":<span class="cov8" title="1">
+                return rules.RestrictedKeywordsInRepoNameRule{Repo: repo, BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "readme":<span class="cov8" title="1">
+                return rules.ReadmeRule{Ctx: ctx, Gh: gh, GithubOrg: githubOrg, HeadRef: headRef, BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "codeowners":<span class="cov8" title="1">
+                return rules.CodeownersRule{Ctx: ctx, Gh: gh, GithubOrg: githubOrg, Ch: helpers.CodeOwnerHelper{Ctx: ctx, Gh: gh, GithubOrg: githubOrg}, HeadRef: headRef, BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "branch-protection":<span class="cov8" title="1">
+                return rules.BranchProtectionRule{Ctx: ctx, Gh: gh, GithubOrg: githubOrg, Repo: repo, BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "description":<span class="cov8" title="1">
+                return rules.DescriptionRule{Repo: repo, BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "topic":<span class="cov8" title="1">
+                return rules.TopicRule{Ctx: ctx, Gh: gh, GithubOrg: githubOrg, Repo: repo, BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "teams":<span class="cov8" title="1">
+                return rules.TeamsRule{Ctx: ctx, Gh: gh, GithubOrg: githubOrg, BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "too-many-branches":<span class="cov8" title="1">
+                return rules.TooManyBranchesRule{Ctx: ctx, Gh: gh, GithubOrg: githubOrg, Ch: helpers.CodeOwnerHelper{Ctx: ctx, Gh: gh, GithubOrg: githubOrg}, BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "inactive-master":<span class="cov8" title="1">
+                return rules.InactiveMasterBranchRule{Ctx: ctx, Gh: gh, GithubOrg: githubOrg, BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "empty-repo":<span class="cov8" title="1">
+                return rules.EmptyRepoRule{Ctx: ctx, Gh: gh, GithubOrg: githubOrg, HeadRef: headRef, BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "stale-branch":<span class="cov8" title="1">
+                return rules.StaleBranchRule{Ctx: ctx, Gh4: client.NewGitHubV4Client(), GithubOrg: githubOrg, BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        case "auto-privatise":<span class="cov8" title="1">
+                return rules.AutoPrivatiseRule{Ctx: ctx, Gh: gh, GithubOrg: githubOrg, Repo: repo, BaseRule: &amp;rules.BaseRule{Config: ruleConfig, RepoName: repo.GetName()}}, nil</span>
+        }
+
+        <span class="cov8" title="1">return nil, fmt.Errorf("Unrecognised rule type in the config: " + ruleConfig.Type)</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>
