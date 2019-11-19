@@ -43,7 +43,7 @@
   
 ## Demo Video
 
-[Video](case-study/Microsoft-dynamics-365-crm.webm)
+https://www.youtube.com/watch?v=d3S8JIbNi5Q
 ## Sources
 
 - [Microsoft CRM Wiki](https://en.wikipedia.org/wiki/Microsoft_Dynamics_CRM)
