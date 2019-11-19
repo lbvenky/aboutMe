@@ -42,8 +42,9 @@
   - Cases
   
 ## Demo Video
+[![Microsoft Dynamics 365 Demo](D365-Font-cover.png)](https://emisgroup.sharepoint.com/:v:/s/MicrosoftDynamics365/EQGWUsI9K1FGsH_uNwE4g5UB_q88YNllCRoMJSrs2gCCKQ?e=TgQcA5)
 
-https://www.youtube.com/watch?v=d3S8JIbNi5Q
+
 ## Sources
 
 - [Microsoft CRM Wiki](https://en.wikipedia.org/wiki/Microsoft_Dynamics_CRM)
