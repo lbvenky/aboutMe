@@ -41,7 +41,9 @@
 - Service
   - Cases
   
+## Demo Video
 
+[Video](case-study/Microsoft-dynamics-365-crm.webm)
 ## Sources
 
 - [Microsoft CRM Wiki](https://en.wikipedia.org/wiki/Microsoft_Dynamics_CRM)
