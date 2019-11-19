@@ -15,5 +15,5 @@
 
 ## Sources
 
-- [Microsoft CRM WIKI](https://en.wikipedia.org/wiki/Microsoft_Dynamics_CRM)
+- [Microsoft CRM Wiki](https://en.wikipedia.org/wiki/Microsoft_Dynamics_CRM)
 - [Trial Dynamics](https://trials.dynamics.com/)
