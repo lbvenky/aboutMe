@@ -12,3 +12,8 @@
 - Professional Edition
 - Enterprise Edition
 - Service Provider Edition
+
+## Sources
+
+- [Microsoft CRM WIKI](https://en.wikipedia.org/wiki/Microsoft_Dynamics_CRM)
+- [Trial Dynamics](https://trials.dynamics.com/)
