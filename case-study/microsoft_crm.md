@@ -13,6 +13,35 @@
 - Enterprise Edition
 - Service Provider Edition
 
+## CRM Features
+
+- Customers
+  - Accounts
+  - Contacts
+  
+- Sales
+  - Leads
+  - Oppurtunities
+  - Competitors
+  
+- Collateral
+  - Quotes
+  - Orders
+  - Invoices
+  - Products
+  - Sales Literature
+
+- Marketing
+  - Marketing List
+  - Campaign
+  
+- Performance
+  - User Goals
+  
+- Service
+  - Cases
+  
+
 ## Sources
 
 - [Microsoft CRM Wiki](https://en.wikipedia.org/wiki/Microsoft_Dynamics_CRM)
